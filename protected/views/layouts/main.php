@@ -1,59 +1,52 @@
-<?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="language" content="en">
-
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print">
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection">
-	<![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
-
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/fonts.css" rel="stylesheet">
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" rel="stylesheet">    
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Netscout</title>
 </head>
-
 <body>
+<header class="header">
+    <div class="header-internal">
+        <a id="logo-block" href="#"></a>
+        
+         <?php $this->widget('application.widgets.MainMenu');?>
+        
+        <ul class="socials">
+            <li><a class="twitter" href="#"></a></li>
+            <li><a class="facebook" href="#"></a></li>
+            <li><a class="skype" href="#"></a></li>
+        </ul>
+    </div>
+</header>
 
-<div class="container" id="page">
+<?php echo $content;?>
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+<div style="clear: both;"></div>
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+<div class="footer-line">
+    <div class="footer-internal">
+        <ul class="bottom-menu">
+            <li><a href="#">Main</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </div>
+</div>
 
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
-
-</div><!-- page -->
+<div class="under-footer">
+    <div class="central-block">
+        <p>Suspendisse viverra, nunc in viverra vestibulum, urna tellus accumsan velit, eget faucibus ante libero et dolor. Nulla facilisi. Suspendisse tempor ultrices sem, sed aliquam sem tempor rutrum. Proin vel metus dolor. Aenean hendrerit neque ac mattis commodo. Vivamus id lacus elit. Maecenas massa justo, scelerisque quis facilisis et, malesuada a diam. Pellentesque at pulvinar sapien. Nam tincidunt ultrices lacus eu malesuada. Curabitur vel hendrerit leo. Morbi luctus nibh ligula, nec porta mi luctus ut. Integer sagittis justo at sollicitudin dictum. Aliquam blandit erat est, eget faucibus enim mattis nec.</p>
+        <span class="copyright">© 2014 Lookout, Inc.  Lookout and the Shield Logo are registered trademarks</span>
+    </div>
+</div>
 
 </body>
 </html>

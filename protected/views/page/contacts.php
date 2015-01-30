@@ -12,7 +12,7 @@
         </ul>
     </div>
     <div class="contacts-half-big">
-        <img src="img/map.png" width="616" height="304">
+        <img src="/img/map.png" width="616" height="304">
     </div>
 
     <div style="clear: both;"></div>

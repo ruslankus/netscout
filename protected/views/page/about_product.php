@@ -11,7 +11,7 @@
 
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
         <p>Nulla suscipit, diam vitae interdum aliquet, massa risus luctus sem, vitae commodo risus nisi nec nisl. Morbi volutpat ullamcorper adipiscing. Mauris nec sapien vel lorem ultrices accumsan sed nec nulla. </p>
-        <img src="img/netscout_services.jpg">
+        <img src="/img/netscout_services.jpg">
 
         <div class="content-header"><h2>Augue tortor</h2></div>
 

@@ -1,5 +1,4 @@
 <?php
-
 class ServiceController extends Controller
 {   
      
@@ -7,7 +6,7 @@ class ServiceController extends Controller
         $objAction = Yii::app()->controller->action;
         $objUser = Yii::app()->user;
         if ($objAction->id !=='login' && $objAction->id !=='register')                       
-            if ($objUser->isGuest || $objUser->getState('role') !== 'auth_user'){
+            if ($objUser->isGuest){
                 
                 $this->redirect("/service/login");
             }
@@ -17,59 +16,70 @@ class ServiceController extends Controller
 
      
      
-     public function actionIndex()
-     {
-        echo "Account";
-     }
+	public function actionIndex()
+	{
+		echo "Account";
+	}
      
      
-     public function actionLogin()
-     {
-	    //if logged in - redirect to index
-        if(!Yii::app()->user->isGuest){
-	        $this->redirect($this->createUrl('main/index'));
-	    }
- 
-        $form_model = New LoginForm();
-         //if post request
-        if($_POST['LoginForm'])
-        {
-	        $form_model->attributes = $_POST['LoginForm'];
-	        if($form_model->validate() && $form_model->login()){
+	public function actionLogin()
+	{
+		//if logged in - redirect to index
+		if(!Yii::app()->user->isGuest){
+		    $this->redirect('/service/index');
+		}
+		
+		$form_model = New LoginForm();
+		 //if post request
+		if($_POST['LoginForm'])
+		{
+		    $form_model->attributes = $_POST['LoginForm'];
+		    if($form_model->validate() && $form_model->login()){
+		        $this->redirect('index');
+		    }	
+	    
+		}    
+		$this->render('login', array('form_model' => $form_model));
+	}//end login
+     
+     
+     
+	public function actionRegister()
+	{
+		$form_model = new RegisterForm();
+		
+		if($_POST['RegisterForm'])
+		{
+		    //attributes
+		    $form_model->attributes = $_POST['RegisterForm'];
+		    
+		    //if form valid
+		    if($form_model->validate()){
 		        
-	        }	
-	        
-	    }    
-        $this->render('login', array('form_model' => $form_model));
-     }
+		        $objUser = new Customers();
+		        $objUser->attributes = $form_model->attributes;
+		        $objUser->password = crypt($form_model->password);
+		        
+		        if($objUser->save()){
+		             Debug::d($objUser);
+		            $this->redirect('index');    
+		        }else{
+		            Debug::d($objUser);
+		        }
+		        
+		    }
+		}
+		
+		$this->render('register',array('form_model' => $form_model));
+	}//end Register
      
-     public function actionRegister()
-     {
-        $form_model = new RegisterForm();
-        
-        if($_POST['RegisterForm'])
-        {
-            //attributes
-            $form_model->attributes = $_POST['RegisterForm'];
-            
-            //if form valid
-            if($form_model->validate()){
-                
-                $objUser = new Customers();
-                $objUser->attributes = $form_model->attributes;
-                $objUser->password = crypt($form_model->password);
-                
-                if($objUser->save()){
-                     Debug::d($objUser);
-                    $this->redirect('index');    
-                }else{
-                    Debug::d($objUser);
-                }
-                
-            }
-        }
-        
-        $this->render('register',array('form_model' => $form_model));
-     }       
+    /**
+     * Does logout and redirects
+     */
+    public function actionLogout()
+    {
+        Yii::app()->user->logout(false);
+        $this->redirect('login');
+    }        
     
 }

@@ -783,3 +783,29 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2015/02/02 23:22:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "main/index".' in /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController('main/index')
+#1 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/AMPPS/www/netscout.local/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/main/index
+HTTP_REFERER=http://netscout.local/service/login
+---
+2015/02/02 23:25:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController('index')
+#1 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/AMPPS/www/netscout.local/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index
+HTTP_REFERER=http://netscout.local/index.php/main/index
+---
+2015/02/02 23:35:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController('index')
+#1 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/AMPPS/www/netscout.local/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/index
+---

@@ -32,18 +32,27 @@ class ServiceController extends Controller
      {
         $form_model = new RegisterForm();
         
-         if($_POST['ResolutionForm'])
+        if($_POST['RegisterForm'])
         {
             //attributes
-            $form->attributes = $_POST['ResolutionForm'];
+            $form_model->attributes = $_POST['RegisterForm'];
             
             //if form valid
-            if($form->validate()){
+            if($form_model->validate()){
+                
+                $objUser = new Customers();
+                $objUser->attributes = $form_model->attributes;
+                $objUser->password = crypt($form_model->password);
+                
+                if($objUser->save()){
+                     Debug::d($objUser);
+                    $this->redirect('index');    
+                }else{
+                    Debug::d($objUser);
+                }
                 
             }
         }
-                
-
         
         $this->render('register',array('form_model' => $form_model));
      }       

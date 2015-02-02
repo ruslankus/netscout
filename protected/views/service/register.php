@@ -19,19 +19,26 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="password-field">Password</label>:</td>
-                    <td><input type="password" name="Register[password]" value="" id="password-field" kl_virtual_keyboard_secure_input="on"></td>
+                    <td><?php echo $form->label($form_model,'password'); ?>:</td>
+                    <td>
+                        <?php echo $form->passwordField($form_model,'password'); ?>
+                        <?php echo $form->error($form_model,'password');?>
+                    </td>
                 </tr>
                 <tr>
-                    <td><label for="password-field">Email</label>:</td>
-                    <td><input type="text" name="Register[email]" value="" id="password-field" kl_virtual_keyboard_secure_input="on"></td>
+                    <td><?php echo $form->label($form_model,'email');?>:</td>
+                    <td>
+                        <?php echo $form->textField($form_model,'email')?>
+                        <?php echo $form->error($form_model, 'email'); ?>
+                    </td>
                 </tr>
                 <tr>
                 	<td><label for="key-field"> Key</label></td>
                     <td>
-                    	<input class="key-field" type="text" name="Register[serial-number]" value="" id="key-field1" maxlength="4"  placeholder="XXXX">&nbsp;-
-                    	<input class="key-field" type="text" name="Register[serial-number]" value="" id="key-field2" maxlength="4" placeholder="XXXX">&nbsp;-
-                    	<input class="key-field" type="text" name="Register[serial-number]" value="" id="key-field2" maxlength="4" placeholder="XXXX">
+                    	<?php echo $form->textField($form_model,'key1',array('class'=>'key-field','maxlength'=>4,'placeholder'=>'XXXX'));?>&nbsp;-
+                    	<?php echo $form->textField($form_model,'key2',array('class'=>'key-field','maxlength'=>4,'placeholder'=>'XXXX'));?>&nbsp;-
+                    	<?php echo $form->textField($form_model,'key3',array('class'=>'key-field','maxlength'=>4,'placeholder'=>'XXXX'));?>
+                        <?php echo $form->error($form_model,'full_key'); ?>
                     </td>
                 </tr>
 <!--                <tr>-->

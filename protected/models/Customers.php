@@ -8,8 +8,8 @@
  * @property string $login
  * @property string $f_name
  * @property string $l_name
- * @property integer $password
- * @property string $reg_number
+ * @property string $password
+ * @property string $full_key
  */
 class Customers extends CActiveRecord
 {
@@ -29,11 +29,11 @@ class Customers extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('password', 'numerical', 'integerOnly'=>true),
-			array('login, f_name, l_name, reg_number', 'length', 'max'=>20),
+			array('login, f_name, l_name, full_key', 'length', 'max'=>20),
+			array('password', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, login, f_name, l_name, password, reg_number', 'safe', 'on'=>'search'),
+			array('id, login, f_name, l_name, password, full_key', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,7 +59,7 @@ class Customers extends CActiveRecord
 			'f_name' => 'F Name',
 			'l_name' => 'L Name',
 			'password' => 'Password',
-			'reg_number' => 'Reg Number',
+			'full_key' => 'Full Key',
 		);
 	}
 
@@ -85,8 +85,8 @@ class Customers extends CActiveRecord
 		$criteria->compare('login',$this->login,true);
 		$criteria->compare('f_name',$this->f_name,true);
 		$criteria->compare('l_name',$this->l_name,true);
-		$criteria->compare('password',$this->password);
-		$criteria->compare('reg_number',$this->reg_number,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('full_key',$this->full_key,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

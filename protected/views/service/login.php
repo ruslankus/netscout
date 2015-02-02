@@ -6,15 +6,21 @@
 
         <p class="in-login-p">Suspendisse vehicula eget diam non venenatis. Pellentesque lacinia erat mauris. Integer pellentesque faucibus dignissim. Curabitur ut posuere risus. Nulla sed neque ac magna vestibulum mattis eget ut nunc. Fusce iaculis sed ligula id consectetur. Vestibulum sollicitudin et justo nec commodo. Mauris et dui sit amet purus convallis hendrerit. </p>
 
-        <form action="" method="post">
+        <?php $form = $this->beginWidget('CActiveForm',array('enableAjaxValidation'=>false,'htmlOptions'=>array('class'=>'clearfix'))); ?>
             <table>
                 <tbody><tr>
-                    <td><label for="login-field">Login</label>:</td>
-                    <td><input type="text" name="Login[login]" id="login-field" kl_virtual_keyboard_secure_input="on"></td>
+                    <td><?php echo $form->label($form_model,'username'); ?>:</td>
+                    <td>
+                        <?php echo $form->textField($form_model,'username'); ?>
+                        <?php echo $form->error($form_model,'username'); ?>
+                    </td>
                 </tr>
                 <tr>
-                    <td><label for="password-field">Password</label>:</td>
-                    <td><input type="password" name="Login[password]" id="password-field" kl_virtual_keyboard_secure_input="on"></td>
+                    <td><?php echo $form->label($form_model,'password'); ?>:</td>
+                    <td>
+                        <?php echo $form->passwordField($form_model,'password'); ?>
+                        <?php echo $form->error($form_model,'password');?>
+                    </td>
                 </tr>
             </tbody></table>
 
@@ -23,7 +29,7 @@
                 <a class="button" href="/service/register">Registration</a>
                 <a class="pass-forgot" href="/account/restore">I forgot my password</a>
             </div>
-        </form>
+        <?php $this->endWidget(); ?>
     </div>
     <div style="clear: both;"></div>
 </div>

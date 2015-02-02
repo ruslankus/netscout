@@ -25,7 +25,22 @@ class ServiceController extends Controller
      
      public function actionLogin()
      {
-        $this->render('login');
+	    //if logged in - redirect to index
+        if(!Yii::app()->user->isGuest){
+	        $this->redirect($this->createUrl('main/index'));
+	    }
+ 
+        $form_model = New LoginForm();
+         //if post request
+        if($_POST['LoginForm'])
+        {
+	        $form_model->attributes = $_POST['LoginForm'];
+	        if($form_model->validate() && $form_model->login()){
+		        
+	        }	
+	        
+	    }    
+        $this->render('login', array('form_model' => $form_model));
      }
      
      public function actionRegister()

@@ -478,3 +478,308 @@ in C:\newOpenServer\domains\netscout.local\index.php (13)
 2015/02/02 21:23:35 [warning] [application] Failed to set unsafe attribute "key_id" of "Customers".
 in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (44)
 in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/02 21:12:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/AMPPS/www/netscout.local/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/02 21:12:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/AMPPS/www/netscout.local/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/02 21:22:54 [error] [php] include(ExtLabels.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/AMPPS/www/netscout.local/framework/YiiBase.php:432)
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(20): spl_autoload_call()
+#1 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(13): Trl->__construct()
+#2 /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php(30): t()
+#3 /Applications/AMPPS/www/netscout.local/framework/base/CModel.php(333): LoginForm->attributeLabels()
+#4 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1489): LoginForm->getAttributeLabel()
+#5 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(585): activeLabel()
+#6 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(12): CActiveForm->label()
+#7 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require()
+#8 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): ServiceController->renderInternal()
+#9 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): ServiceController->renderFile()
+#10 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): ServiceController->renderPartial()
+#11 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): ServiceController->render()
+#12 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#13 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): ServiceController->runAction()
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): ServiceController->runActionWithFilters()
+#16 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): ServiceController->run()
+#17 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Applications/AMPPS/www/netscout.local/index.php(13): CWebApplication->run()
+REQUEST_URI=/service/login
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (20)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (13)
+in /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php (30)
+2015/02/02 21:24:03 [error] [php] include(ExtLabels.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/AMPPS/www/netscout.local/framework/YiiBase.php:432)
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(20): spl_autoload_call()
+#1 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(13): Trl->__construct()
+#2 /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php(30): t()
+#3 /Applications/AMPPS/www/netscout.local/framework/base/CModel.php(333): LoginForm->attributeLabels()
+#4 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1489): LoginForm->getAttributeLabel()
+#5 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(585): activeLabel()
+#6 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(12): CActiveForm->label()
+#7 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require()
+#8 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): ServiceController->renderInternal()
+#9 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): ServiceController->renderFile()
+#10 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): ServiceController->renderPartial()
+#11 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): ServiceController->render()
+#12 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#13 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): ServiceController->runAction()
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): ServiceController->runActionWithFilters()
+#16 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): ServiceController->run()
+#17 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Applications/AMPPS/www/netscout.local/index.php(13): CWebApplication->run()
+REQUEST_URI=/service/login
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (20)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (13)
+in /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php (30)
+2015/02/02 22:03:28 [error] [exception.CException] exception 'CException' with message 'Labels and its behaviors do not have a method or closure named "getLabels".' in /Applications/AMPPS/www/netscout.local/framework/base/CComponent.php:266
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getLabels', Array)
+#1 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(20): CActiveRecord->__call('getLabels', Array)
+#2 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(20): Labels->getLabels('en_us')
+#3 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(13): Trl->__construct()
+#4 /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php(30): Trl::t()
+#5 /Applications/AMPPS/www/netscout.local/framework/base/CModel.php(333): LoginForm->attributeLabels()
+#6 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1489): CModel->getAttributeLabel('login')
+#7 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(585): CHtml::activeLabel(Object(LoginForm), 'login', Array)
+#8 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(12): CActiveForm->label(Object(LoginForm), 'login')
+#9 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require('/Applications/A...')
+#10 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/A...', Array, true)
+#11 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): CBaseController->renderFile('/Applications/A...', Array, true)
+#12 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#13 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): CController->render('login', Array)
+#14 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): CController->run('login')
+#19 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController('service/login')
+#20 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#21 /Applications/AMPPS/www/netscout.local/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/service/login
+HTTP_REFERER=http://netscout.local/
+---
+2015/02/02 22:07:15 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT labels.label , labels_trl.value FROM labels
+                JOIN labels_trl,languages
+                WHERE labels.id = labels_trl.label_id 
+                    AND labels_trl.language_id = languages.id
+                    AND languages.prefix = :prefix
+in /Applications/AMPPS/www/netscout.local/protected/models/ext/ExtLabels.php (21)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (20)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (13)
+2015/02/02 22:07:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: labels_trl.label_id. The SQL statement executed was: SELECT labels.label , labels_trl.value FROM labels
+                JOIN labels_trl,languages
+                WHERE labels.id = labels_trl.label_id 
+                    AND labels_trl.language_id = languages.id
+                    AND languages.prefix = :prefix.
+in /Applications/AMPPS/www/netscout.local/protected/models/ext/ExtLabels.php (21)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (20)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (13)
+2015/02/02 22:07:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: labels_trl.label_id. The SQL statement executed was: SELECT labels.label , labels_trl.value FROM labels
+                JOIN labels_trl,languages
+                WHERE labels.id = labels_trl.label_id 
+                    AND labels_trl.language_id = languages.id
+                    AND languages.prefix = :prefix' in /Applications/AMPPS/www/netscout.local/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/AMPPS/www/netscout.local/protected/models/ext/ExtLabels.php(21): CDbCommand->queryAll(true, Array)
+#2 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(20): ExtLabels->getLabels(NULL)
+#3 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(13): Trl->__construct()
+#4 /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php(30): Trl::t()
+#5 /Applications/AMPPS/www/netscout.local/framework/base/CModel.php(333): LoginForm->attributeLabels()
+#6 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1489): CModel->getAttributeLabel('login')
+#7 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(585): CHtml::activeLabel(Object(LoginForm), 'login', Array)
+#8 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(12): CActiveForm->label(Object(LoginForm), 'login')
+#9 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require('/Applications/A...')
+#10 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/A...', Array, true)
+#11 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): CBaseController->renderFile('/Applications/A...', Array, true)
+#12 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#13 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): CController->render('login', Array)
+#14 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): CController->run('login')
+#19 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController('service/login')
+#20 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#21 /Applications/AMPPS/www/netscout.local/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/service/login
+HTTP_REFERER=http://netscout.local/
+---
+2015/02/02 22:21:32 [error] [php] include(ExtMessage.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/AMPPS/www/netscout.local/framework/YiiBase.php:432)
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(21): spl_autoload_call()
+#1 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(13): Trl->__construct()
+#2 /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php(30): t()
+#3 /Applications/AMPPS/www/netscout.local/framework/base/CModel.php(333): LoginForm->attributeLabels()
+#4 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1489): LoginForm->getAttributeLabel()
+#5 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(585): activeLabel()
+#6 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(12): CActiveForm->label()
+#7 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require()
+#8 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): ServiceController->renderInternal()
+#9 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): ServiceController->renderFile()
+#10 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): ServiceController->renderPartial()
+#11 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): ServiceController->render()
+#12 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#13 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): ServiceController->runAction()
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): ServiceController->runActionWithFilters()
+#16 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): ServiceController->run()
+#17 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Applications/AMPPS/www/netscout.local/index.php(13): CWebApplication->run()
+REQUEST_URI=/service/login
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (21)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (13)
+in /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php (30)
+2015/02/02 22:22:26 [error] [php] include(ExtMessage.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/AMPPS/www/netscout.local/framework/YiiBase.php:432)
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(21): spl_autoload_call()
+#1 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(13): Trl->__construct()
+#2 /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php(30): t()
+#3 /Applications/AMPPS/www/netscout.local/framework/base/CModel.php(333): LoginForm->attributeLabels()
+#4 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1489): LoginForm->getAttributeLabel()
+#5 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(585): activeLabel()
+#6 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(12): CActiveForm->label()
+#7 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require()
+#8 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): ServiceController->renderInternal()
+#9 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): ServiceController->renderFile()
+#10 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): ServiceController->renderPartial()
+#11 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): ServiceController->render()
+#12 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#13 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): ServiceController->runAction()
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): ServiceController->runActionWithFilters()
+#16 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): ServiceController->run()
+#17 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Applications/AMPPS/www/netscout.local/index.php(13): CWebApplication->run()
+REQUEST_URI=/service/login
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (21)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (13)
+in /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php (30)
+2015/02/02 22:22:29 [error] [php] include(ExtMessage.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/AMPPS/www/netscout.local/framework/YiiBase.php:432)
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(21): spl_autoload_call()
+#1 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(13): Trl->__construct()
+#2 /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php(30): t()
+#3 /Applications/AMPPS/www/netscout.local/framework/base/CModel.php(333): LoginForm->attributeLabels()
+#4 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1489): LoginForm->getAttributeLabel()
+#5 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(585): activeLabel()
+#6 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(12): CActiveForm->label()
+#7 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require()
+#8 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): ServiceController->renderInternal()
+#9 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): ServiceController->renderFile()
+#10 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): ServiceController->renderPartial()
+#11 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): ServiceController->render()
+#12 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#13 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): ServiceController->runAction()
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): ServiceController->runActionWithFilters()
+#16 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): ServiceController->run()
+#17 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Applications/AMPPS/www/netscout.local/index.php(13): CWebApplication->run()
+REQUEST_URI=/service/login
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (21)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (13)
+in /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php (30)
+2015/02/02 22:23:58 [error] [php] include(ExtMessage.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/AMPPS/www/netscout.local/framework/YiiBase.php:432)
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(21): spl_autoload_call()
+#1 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(13): Trl->__construct()
+#2 /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php(30): t()
+#3 /Applications/AMPPS/www/netscout.local/framework/base/CModel.php(333): LoginForm->attributeLabels()
+#4 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1489): LoginForm->getAttributeLabel()
+#5 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(585): activeLabel()
+#6 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(12): CActiveForm->label()
+#7 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require()
+#8 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): ServiceController->renderInternal()
+#9 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): ServiceController->renderFile()
+#10 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): ServiceController->renderPartial()
+#11 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): ServiceController->render()
+#12 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#13 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): ServiceController->runAction()
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): ServiceController->runActionWithFilters()
+#16 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): ServiceController->run()
+#17 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Applications/AMPPS/www/netscout.local/index.php(13): CWebApplication->run()
+REQUEST_URI=/service/login
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (21)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (13)
+in /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php (30)
+2015/02/02 22:24:02 [error] [php] include(ExtMessage.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/AMPPS/www/netscout.local/framework/YiiBase.php:432)
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(21): spl_autoload_call()
+#1 /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php(13): Trl->__construct()
+#2 /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php(30): t()
+#3 /Applications/AMPPS/www/netscout.local/framework/base/CModel.php(333): LoginForm->attributeLabels()
+#4 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1489): LoginForm->getAttributeLabel()
+#5 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(585): activeLabel()
+#6 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(12): CActiveForm->label()
+#7 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require()
+#8 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): ServiceController->renderInternal()
+#9 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): ServiceController->renderFile()
+#10 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): ServiceController->renderPartial()
+#11 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): ServiceController->render()
+#12 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#13 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): ServiceController->runAction()
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): ServiceController->runActionWithFilters()
+#16 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): ServiceController->run()
+#17 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Applications/AMPPS/www/netscout.local/index.php(13): CWebApplication->run()
+REQUEST_URI=/service/login
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (21)
+in /Applications/AMPPS/www/netscout.local/protected/helpers/Trl.php (13)
+in /Applications/AMPPS/www/netscout.local/protected/models/forms/LoginForm.php (30)
+2015/02/02 22:26:34 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.login" is not defined.' in /Applications/AMPPS/www/netscout.local/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(2728): CComponent->__get('login')
+#1 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(2451): CHtml::resolveValue(Object(LoginForm), 'login')
+#2 /Applications/AMPPS/www/netscout.local/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(LoginForm), 'login', Array)
+#3 /Applications/AMPPS/www/netscout.local/framework/web/widgets/CActiveForm.php(792): CHtml::activeTextField(Object(LoginForm), 'login', Array)
+#4 /Applications/AMPPS/www/netscout.local/protected/views/service/login.php(14): CActiveForm->textField(Object(LoginForm), 'login')
+#5 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(126): require('/Applications/A...')
+#6 /Applications/AMPPS/www/netscout.local/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/A...', Array, true)
+#7 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(869): CBaseController->renderFile('/Applications/A...', Array, true)
+#8 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#9 /Applications/AMPPS/www/netscout.local/protected/controllers/ServiceController.php(29): CController->render('login', Array)
+#10 /Applications/AMPPS/www/netscout.local/framework/web/actions/CInlineAction.php(49): ServiceController->actionLogin()
+#11 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Applications/AMPPS/www/netscout.local/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(282): CController->run('login')
+#15 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController('service/login')
+#16 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /Applications/AMPPS/www/netscout.local/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/service/login
+---
+2015/02/02 22:31:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/AMPPS/www/netscout.local/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Applications/AMPPS/www/netscout.local/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/AMPPS/www/netscout.local/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

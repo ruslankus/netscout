@@ -16,9 +16,10 @@ class Trl
     }
     
     private function __construct() {
-        $currLng = Yii::app()->language;
+        //$currLng = Yii::app()->language;
+        $currLng = "en";
         $this->_arrLabels = ExtLabels::model()->getLabels($currLng);
-        $this->_arrMessages = ExtMessage::model()->getMessage($currLng);
+        //$this->_arrMessages = ExtMessage::model()->getMessage($currLng);
     }
         
     private function __clone(){}

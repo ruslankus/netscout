@@ -30,7 +30,22 @@ class ServiceController extends Controller
      
      public function actionRegister()
      {
-        $this->render('register');
+        $form_model = new RegisterForm();
+        
+         if($_POST['ResolutionForm'])
+        {
+            //attributes
+            $form->attributes = $_POST['ResolutionForm'];
+            
+            //if form valid
+            if($form->validate()){
+                
+            }
+        }
+                
+
+        
+        $this->render('register',array('form_model' => $form_model));
      }       
     
 }

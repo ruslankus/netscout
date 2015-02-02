@@ -16,7 +16,8 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
-        'application.models.ext.*', 
+        'application.models.ext.*',
+        'application.models.forms.*', 
 		'application.components.*',
         'application.helpers.*',
 	),
@@ -55,6 +56,9 @@ return array(
 
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
+        'customer_db'=> require(dirname(__FILE__).'/customer_db.php'),
+        'numbers_db' => require(dirname(__FILE__).'/numbers_db.php'),
+       
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

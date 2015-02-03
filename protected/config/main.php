@@ -56,8 +56,8 @@ return array(
 
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
-        'customer_db'=> require(dirname(__FILE__).'/customer_db.php'),
-        'numbers_db' => require(dirname(__FILE__).'/numbers_db.php'),
+        //'customer_db'=> require(dirname(__FILE__).'/customer_db.php'),
+        //'numbers_db' => require(dirname(__FILE__).'/numbers_db.php'),
        
 
 		'errorHandler'=>array(

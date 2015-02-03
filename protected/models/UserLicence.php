@@ -1,22 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "numbers".
+ * This is the model class for table "user_licence".
  *
- * The followings are the available columns in table 'numbers':
+ * The followings are the available columns in table 'user_licence':
  * @property integer $id
- * @property string $lic_number
- * @property string $art_number
- * @property integer $used
+ * @property integer $user_id
+ * @property integer $lic_id
  */
-class Numbers extends CActiveRecord
+class UserLicence extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'numbers';
+		return 'user_licence';
 	}
 
 	/**
@@ -27,11 +26,11 @@ class Numbers extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('used', 'numerical', 'integerOnly'=>true),
-			array('lic_number, art_number', 'safe'),
+			array('user_id, lic_id', 'required'),
+			array('user_id, lic_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, lic_number, art_number, used', 'safe', 'on'=>'search'),
+			array('id, user_id, lic_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,9 +52,8 @@ class Numbers extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'lic_number' => 'Lic Number',
-			'art_number' => 'Art Number',
-			'used' => 'Used',
+			'user_id' => 'User',
+			'lic_id' => 'Lic',
 		);
 	}
 
@@ -78,9 +76,8 @@ class Numbers extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('lic_number',$this->lic_number,true);
-		$criteria->compare('art_number',$this->art_number,true);
-		$criteria->compare('used',$this->used);
+		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('lic_id',$this->lic_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -91,7 +88,7 @@ class Numbers extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Numbers the static model class
+	 * @return UserLicence the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'menu':
  * @property integer $id
  * @property string $label
+ * @property string $route
  */
 class Menu extends CActiveRecord
 {
@@ -25,10 +26,10 @@ class Menu extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('label', 'safe'),
+			array('label, route', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, label', 'safe', 'on'=>'search'),
+			array('id, label, route', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,6 +52,7 @@ class Menu extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'label' => 'Label',
+			'route' => 'Route',
 		);
 	}
 
@@ -74,6 +76,7 @@ class Menu extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('label',$this->label,true);
+		$criteria->compare('route',$this->route,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

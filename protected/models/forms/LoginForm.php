@@ -9,6 +9,8 @@ class LoginForm extends CFormModel
 {
 	public $username;
 	public $password;
+    public $rememberMe;
+	
 
 	private $_identity;
 
@@ -19,41 +21,39 @@ class LoginForm extends CFormModel
 	 */
 	public function rules()
 	{
-        return array(
-            // username and password are required
-            array('username, password', 'required','message'=> Trl::t()->getMsg('fill the field') . '"{attribute}"'),
-            // password needs to be authenticated
-            array('password', 'authenticate'),
-        );
+		return array(
+			// username and password are required
+			array('username, password', 'required'),
+			
+			// password needs to be authenticated
+			array('password', 'authenticate'),
+		);
 	}
 
-
-    public function attributeLabels()
-    {
-        return array(
-            'username' => Trl::t()->getLabel('login'),
-            'password' => Trl::t()->getLabel('password')
-        );
-    }
-
+	/**
+	 * Declares attribute labels.
+	 */
+	public function attributeLabels()
+        {
+            return array(
+                'username' => Trl::t()->getLabel('login'),
+                'password' => Trl::t()->getLabel('password')
+            );
+        }
 
 	/**
 	 * Authenticates the password.
 	 * This is the 'authenticate' validator as declared in rules().
 	 */
-    public function authenticate($attribute,$params)
-    {
-        if(!$this->hasErrors())
-        {
-            $this->_identity=new UserIdentity($this->username,$this->password);
-            if(!$this->_identity->authenticate())
-            {
-                if($this->_identity->errorCode == UserIdentity::ERROR_PASSWORD_INVALID){$this->addError('password',Trl::t()->getMsg('Incorrect password'));}
-                elseif($this->_identity->errorCode == UserIdentity::ERROR_USERNAME_INVALID){$this->addError('username',Trl::t()->getMsg('User not exist'));}
-                elseif($this->_identity->errorCode == UserIdentity::ERROR_UNKNOWN_IDENTITY){$this->addError('username',Trl::t()->getMsg('Unknown error. Authentication failed'));}
-            }
-        }
-    }
+	public function authenticate($attribute,$params)
+	{
+		if(!$this->hasErrors())
+		{
+			$this->_identity=new UserIdentity($this->username,$this->password);
+			if(!$this->_identity->authenticate())
+				$this->addError('password','Incorrect username or password.');
+		}
+	}
 
 	/**
 	 * Logs in the user using the given username and password in the model.
@@ -68,13 +68,11 @@ class LoginForm extends CFormModel
 		}
 		if($this->_identity->errorCode===UserIdentity::ERROR_NONE)
 		{
-			Yii::app()->user->login($this->_identity);
+			$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
+			Yii::app()->user->login($this->_identity,$duration);
 			return true;
 		}
 		else
-        {
-            return false;
-        }
+			return false;
 	}
 }
-

@@ -7,6 +7,7 @@
  * @property integer $id
  * @property integer $menu_id
  * @property string $content
+ * @property string $template
  */
 class Pages extends CActiveRecord
 {
@@ -28,10 +29,10 @@ class Pages extends CActiveRecord
 		return array(
 			array('menu_id', 'required'),
 			array('menu_id', 'numerical', 'integerOnly'=>true),
-			array('content', 'safe'),
+			array('content, template', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, menu_id, content', 'safe', 'on'=>'search'),
+			array('id, menu_id, content, template', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,6 +56,7 @@ class Pages extends CActiveRecord
 			'id' => 'ID',
 			'menu_id' => 'Menu',
 			'content' => 'Content',
+			'template' => 'Template',
 		);
 	}
 
@@ -79,6 +81,7 @@ class Pages extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('menu_id',$this->menu_id);
 		$criteria->compare('content',$this->content,true);
+		$criteria->compare('template',$this->template,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

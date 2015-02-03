@@ -1,6 +1,7 @@
 <?php
 class ServiceController extends Controller
 {   
+     public $layout='//layouts/main-logged';       
      
      protected function beforeAction($action) {
         $objAction = Yii::app()->controller->action;
@@ -18,13 +19,14 @@ class ServiceController extends Controller
      
 	public function actionIndex()
 	{
-		echo "Account";
+		$this->render('account');
 	}
      
      
 	public function actionLogin()
 	{
-		//if logged in - redirect to index
+		$this->layout = '//layouts/main';  
+        //if logged in - redirect to index
 		if(!Yii::app()->user->isGuest){
 		    $this->redirect('/service/index');
 		}
@@ -46,7 +48,8 @@ class ServiceController extends Controller
      
 	public function actionRegister()
 	{
-		$form_model = new RegisterForm();
+		$this->layout = '//layouts/main';
+        $form_model = new RegisterForm();
 		
 		if($_POST['RegisterForm'])
 		{
@@ -61,10 +64,21 @@ class ServiceController extends Controller
 		        $objUser->password = crypt($form_model->password);
 		        
 		        if($objUser->save()){
-		             Debug::d($objUser);
-		            $this->redirect('index');    
+                    //save lic detail
+                    $objUsrLic = new UserLicence();
+                    $objUsrLic->user_id = $objUser->id;
+                    $objUsrLic->lic_id = $form_model->key_id;
+                    $objUsrLic->save(); 
+                  
+		            $login_model = new LoginForm();
+                    $login_model->username = $objUser->login;
+                    $login_model->password = $form_model->password; 
+		            if($login_model->login()){
+		             $this->redirect('index');  
+		            }    
 		        }else{
-		            Debug::d($objUser);
+                    //Debug::d($objUser);    		          
+		            $form_model->addError('common',"Create user failed");
 		        }
 		        
 		    }

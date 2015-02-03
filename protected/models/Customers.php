@@ -29,8 +29,7 @@ class Customers extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('login, f_name, l_name, full_key', 'length', 'max'=>20),
-			array('password', 'safe'),
+			array('login, f_name, l_name, password, full_key', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, login, f_name, l_name, password, full_key', 'safe', 'on'=>'search'),
@@ -91,14 +90,6 @@ class Customers extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-
-	/**
-	 * @return CDbConnection the database connection used for this class
-	 */
-	public function getDbConnection()
-	{
-		return Yii::app()->customer_db;
 	}
 
 	/**

@@ -10,7 +10,7 @@
         <?php $form=$this->beginWidget('CActiveForm',array('id' =>'','enableAjaxValidation'=>false,)); ?>
             <table>
                 <input type="hidden" value="" name="Register[anti_cap]">
-
+                <?php echo $form->error($form_model,'common');?>    
                 <tbody><tr>
                     <td><?php echo $form->label($form_model,'login'); ?>:</td>
                     <td>

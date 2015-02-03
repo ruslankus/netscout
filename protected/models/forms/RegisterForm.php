@@ -9,6 +9,7 @@ class RegisterForm extends CFormModel
     public $key3;
     public $full_key;
     public $key_id;
+    public $common;
     
     public function rules()
 	{

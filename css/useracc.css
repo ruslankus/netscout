@@ -1,0 +1,118 @@
+
+.buttons-backgrounds {
+	background: rgb(226,219,239); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(226,219,239,1) 0%, rgba(252,250,253,1) 27%, rgba(252,250,253,1) 64%, rgba(226,219,239,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,219,239,1)), color-stop(27%,rgba(252,250,253,1)), color-stop(64%,rgba(252,250,253,1)), color-stop(100%,rgba(226,219,239,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(226,219,239,1) 0%,rgba(252,250,253,1) 27%,rgba(252,250,253,1) 64%,rgba(226,219,239,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(226,219,239,1) 0%,rgba(252,250,253,1) 27%,rgba(252,250,253,1) 64%,rgba(226,219,239,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(226,219,239,1) 0%,rgba(252,250,253,1) 27%,rgba(252,250,253,1) 64%,rgba(226,219,239,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(226,219,239,1) 0%,rgba(252,250,253,1) 27%,rgba(252,250,253,1) 64%,rgba(226,219,239,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2dbef', endColorstr='#e2dbef',GradientType=0 ); /* IE6-9 */
+
+}
+
+.download-button {
+	color: #6d5976;
+	padding: 3px 12px 3px 12px;
+	font-size: 18px;
+	margin-bottom: 22px
+}
+
+#add-new-key {
+	margin-bottom:15px;
+	width: 100%;
+	display: table;
+	vertical-align: middle
+}
+
+#add-new-key h2 {
+	display: table-cell
+}
+
+#add-new-key form {
+	display: table-cell;
+	vertical-align: middle
+}
+
+#add-new-key form input {
+}
+
+#add-new-key-input-field {
+	color: #b1b1b1;
+	padding-left: 5px;
+	width: 73%;
+	height: 60%;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+}
+
+#add-new-key-submit {
+	margin-left: 2%;
+	width: 22%;
+	display: table-cell;
+	height: auto;
+	line-height:26px;
+}
+
+#current-keys {
+	font-family: arial;
+	margin-top: 15px;
+	margin-bottom: 45px;
+}
+
+#current-user-keys-list {
+	list-style-type: none;
+}
+
+#current-keys ul li {
+	margin-top: 15px;
+	margin-bottom:15px;
+	width:70%;
+	display: table;
+	vertical-align: middle;
+}
+
+#current-keys ul li div {
+	
+	display: table-cell;
+	width: 48%;
+	padding: 1%;
+	float:left;
+}
+
+#current-keys ul li div text {
+	float: left
+}
+
+.user-key {
+	font-size: 22px;
+	color: #5f5f5f
+}
+
+.desc-tittle {
+	font-size: 14px;
+}
+
+.desc-type {
+	color: #6f5787;  
+	font-size: 14px;
+}
+
+.user-key-dates {
+	width: 100%;
+	font-size: 12px;
+}
+
+.user-key-dates text {
+	width: 100%;
+}
+
+.download-licence-button  a {
+	height: auto;
+	line-height: 24px;
+	color: #6f5787;
+	padding: 0 5%;
+}

@@ -1,3 +1,7 @@
+<?php
+    $cs = Yii::app()->clientScript;
+    $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/useracc.css');
+?> 	
 <div class="separator-gradient"></div>
 <div class="main-wrapper">
     <div class="block-header"><h1>Your Account</h1></div>
@@ -19,48 +23,31 @@
 				end of id="add-new-key"
 		-->
 		<div class="hr"></div>
- <?php
-$cs = Yii::app()->clientScript;
-$cs->registerCssFile(Yii::app()->request->baseUrl.'/css/useracc.css');
-?> 		
+	
 		<div id="current-keys">
 			<h2>Your key(s)</h2>
 			<ul id="current-user-keys-list">
+                <?php foreach($arrUsrData as $data):?>
 				<li>
 					<div class="user-key">
-						<text>JA34 - KJ67 - GH61</text>
+						<text><?php echo $data['lic_number']; ?></text>
 					</div>
 					<div class="user-key-desc">
-						<text class="desc-tittle" >Some title of software - Multi-device</text>
-						<text class="desc-type">Key type: Commercial <b>[3 Devices]</b></text>
+						<text class="desc-tittle" ><?php echo $data['decription']?></text>
+                        <text class="desc-tittle" ><?php echo $data['part_number']?></text>
+                        <text class="desc-tittle" ><?php echo $data['comment']?></text><br />
+						<text class="desc-type">Key Limit:<b>[<?php echo $data['user_limit'];?> users]</b></text>
 					</div>
 					<div class="download-licence-button">
-						<a href="#" class="button buttons-backgrounds">Download licence</a>
+						<a href="/service/genlic/<?php echo $data['lic_id']?>" class="button buttons-backgrounds">Download licence</a>
 					</div>
 					<div class="user-key-dates">
 						<text>Activation date: 16.10.2014</text>
-						<text>Exiration date: 10.10.2015</text>
 					</div>
 				</li>
 				<div class="hr"></div><!-- This div appears after every list item-->
+				<?php endforeach; ?>
 				
-				<li>
-					<div class="user-key">
-						<text>FK46 - SN81 - 94AX</text>
-					</div>
-					<div class="user-key-desc">
-						<text class="desc-tittle" >Some title of software - Multi-device</text>
-						<text class="desc-type">Key type: Commercial <b>[3 Devices]</b></text>
-					</div>
-					<div class="download-licence-button">
-						<a href="#" class="button">Download licence</a>
-					</div>
-					<div class="user-key-dates">
-						<text>Activation date: 16.10.2014</text>
-						<text>Exiration date: 10.10.2015</text>
-					</div>
-				</li>
-				<div class="hr"></div><!-- This div appears after every list item-->
 			</ul>
 			<!--
 				end of current-user-keys-list

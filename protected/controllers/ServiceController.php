@@ -19,7 +19,11 @@ class ServiceController extends Controller
      
 	public function actionIndex()
 	{
-		$this->render('account');
+		$objUsr = Yii::app()->user;
+        
+        $arrUsrData = ExtUserLicence::model()->get_user_license_info($objUsr->id);
+                
+        $this->render('account', array('arrUsrData' => $arrUsrData));
 	}
      
      
@@ -43,6 +47,11 @@ class ServiceController extends Controller
 		}    
 		$this->render('login', array('form_model' => $form_model));
 	}//end login
+    
+    
+    public function actionGenLic($id){
+        GenLic::generateLic($id);
+    }
      
      
      

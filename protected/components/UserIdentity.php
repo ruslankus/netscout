@@ -44,6 +44,8 @@ class UserIdentity extends CUserIdentity
                      //write params to session
                     $this->setState('id',$objUsr->id);                   
                     $this->setState('login',$objUsr->login);
+                    $this->setState('fname',$objUsr->f_name);
+                    $this->setState('lname',$objUsr->l_name);
 
                 }else{
 	                $this->errorCode = self::ERROR_PASSWORD_INVALID;                    

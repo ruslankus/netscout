@@ -1075,3 +1075,295 @@ in C:\newOpenServer\domains\netscout.local\index.php (13)
 2015/02/03 20:28:22 [warning] [application] Failed to set unsafe attribute "common" of "Customers".
 in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (63)
 in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 13:41:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/04 15:10:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(int)6}' at line 1. The SQL statement executed was: SELECT t3.* FROM user_licence t1 JOIN customers t2 ON t1.user_id = t2.id JOIN numbers t3 ON t1.lic_id = t3.id WHERE t2.id = {(int)6}.
+in C:\newOpenServer\domains\netscout.local\protected\models\ext\ExtUserLicence.php (22)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (24)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 15:10:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(int)6}' at line 1. The SQL statement executed was: SELECT t3.* FROM user_licence t1 JOIN customers t2 ON t1.user_id = t2.id JOIN numbers t3 ON t1.lic_id = t3.id WHERE t2.id = {(int)6}' in C:\newOpenServer\domains\netscout.local\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\newOpenServer\domains\netscout.local\protected\models\ext\ExtUserLicence.php(22): CDbCommand->queryAll()
+#2 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(24): ExtUserLicence->get_user_license_info('6')
+#3 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionIndex()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/index')
+#9 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/service/index
+HTTP_REFERER=http://netscout.local/service/login
+---
+2015/02/04 15:42:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/04 15:42:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/04 16:04:27 [error] [php] Invalid argument supplied for foreach() (C:\newOpenServer\domains\netscout.local\protected\views\service\account.php:29)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): ServiceController->renderFile()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(782): ServiceController->renderPartial()
+#2 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(26): ServiceController->render()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionIndex()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/index
+in C:\newOpenServer\domains\netscout.local\protected\views\service\account.php (29)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (26)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 16:15:41 [error] [php] Invalid argument supplied for foreach() (C:\newOpenServer\domains\netscout.local\protected\views\service\account.php:29)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): ServiceController->renderFile()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(782): ServiceController->renderPartial()
+#2 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(26): ServiceController->render()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionIndex()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/index
+in C:\newOpenServer\domains\netscout.local\protected\views\service\account.php (29)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (26)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 16:16:00 [error] [php] Invalid argument supplied for foreach() (C:\newOpenServer\domains\netscout.local\protected\views\service\account.php:29)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): ServiceController->renderFile()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(782): ServiceController->renderPartial()
+#2 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(26): ServiceController->render()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionIndex()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/index
+in C:\newOpenServer\domains\netscout.local\protected\views\service\account.php (29)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (26)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 16:34:16 [error] [php] Invalid argument supplied for foreach() (C:\newOpenServer\domains\netscout.local\protected\views\service\account.php:29)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): ServiceController->renderFile()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(782): ServiceController->renderPartial()
+#2 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(26): ServiceController->render()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionIndex()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/index
+in C:\newOpenServer\domains\netscout.local\protected\views\service\account.php (29)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (26)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 17:18:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "services/genlic".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('services/genlic')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/services/genlic
+HTTP_REFERER=http://netscout.local/service/index
+---
+2015/02/04 17:19:36 [error] [php] Non-static method GenLic::_write_binary_str() should not be called statically (C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php:69)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionGenLic()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/genlic
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (69)
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (69)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+2015/02/04 19:28:08 [error] [php] fwrite() expects parameter 1 to be resource, null given (C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php:48)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(53): generateLic()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionGenLic()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/genlic
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (48)
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (71)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+2015/02/04 19:29:57 [error] [php] Missing argument 3 for GenLic::_write_binary_str(), called in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php on line 71 and defined (C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php:32)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionGenLic()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/genlic
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (32)
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (71)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+2015/02/04 19:32:35 [error] [php] fopen(/temp/license.lic): failed to open stream: No such file or directory (C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php:69)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionGenLic()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/genlic
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (69)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 19:33:24 [error] [php] fopen(/temp/license.lic): failed to open stream: No such file or directory (C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php:69)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionGenLic()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/genlic
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (69)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 19:33:30 [error] [php] fopen(/temp/license.lic): failed to open stream: No such file or directory (C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php:69)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionGenLic()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/genlic
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (69)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 20:09:12 [error] [php] Missing argument 1 for GenLic::generateLic(), called in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php on line 53 and defined (C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php:57)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/service/genlic
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (57)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/04 20:13:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN lice' at line 1. The SQL statement executed was: SELECT t2.f_name, t2.l_name, t3.lic_number, t4.part_number, t4.user_limit FROM user_licence t1JOIN customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN license_types t4 ON t3.type = t4.idWHERE t1.lic_id = 3.
+in C:\newOpenServer\domains\netscout.local\protected\models\ext\ExtUserLicence.php (44)
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (59)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+2015/02/04 20:13:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN lice' at line 1. The SQL statement executed was: SELECT t2.f_name, t2.l_name, t3.lic_number, t4.part_number, t4.user_limit FROM user_licence t1JOIN customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN license_types t4 ON t3.type = t4.idWHERE t1.lic_id = 3' in C:\newOpenServer\domains\netscout.local\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\newOpenServer\domains\netscout.local\protected\models\ext\ExtUserLicence.php(44): CDbCommand->queryAll()
+#2 C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php(59): ExtUserLicence->get_user_and_licence_info('3')
+#3 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(53): GenLic::generateLic('3')
+#4 [internal function]: ServiceController->actionGenLic('3')
+#5 C:\newOpenServer\domains\netscout.local\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ServiceController), Array)
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ServiceController), Object(ReflectionMethod), Array)
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('genlic')
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/genlic')
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/service/genlic/3
+HTTP_REFERER=http://netscout.local/service/index
+---
+2015/02/04 20:13:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN lice' at line 1. The SQL statement executed was: SELECT t2.f_name, t2.l_name, t3.lic_number, t4.part_number, t4.user_limit FROM user_licence t1JOIN customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN license_types t4 ON t3.type = t4.id WHERE t1.lic_id = 3.
+in C:\newOpenServer\domains\netscout.local\protected\models\ext\ExtUserLicence.php (44)
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (59)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+2015/02/04 20:13:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN lice' at line 1. The SQL statement executed was: SELECT t2.f_name, t2.l_name, t3.lic_number, t4.part_number, t4.user_limit FROM user_licence t1JOIN customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN license_types t4 ON t3.type = t4.id WHERE t1.lic_id = 3' in C:\newOpenServer\domains\netscout.local\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\newOpenServer\domains\netscout.local\protected\models\ext\ExtUserLicence.php(44): CDbCommand->queryAll()
+#2 C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php(59): ExtUserLicence->get_user_and_licence_info('3')
+#3 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(53): GenLic::generateLic('3')
+#4 [internal function]: ServiceController->actionGenLic('3')
+#5 C:\newOpenServer\domains\netscout.local\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ServiceController), Array)
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ServiceController), Object(ReflectionMethod), Array)
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('genlic')
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/genlic')
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/service/genlic/3
+HTTP_REFERER=http://netscout.local/service/index
+---
+2015/02/04 20:14:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'numbers t3 ON t1.lic_id = t3.id JOIN license_types t4 ON t3.type = t4.id WHERE t' at line 1. The SQL statement executed was: SELECT t2.f_name, t2.l_name, t3.lic_number, t4.part_number, t4.user_limit FROM user_licence t1 JOIN customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN license_types t4 ON t3.type = t4.id WHERE t1.lic_id = 2.
+in C:\newOpenServer\domains\netscout.local\protected\models\ext\ExtUserLicence.php (44)
+in C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php (59)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php (53)
+2015/02/04 20:14:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'numbers t3 ON t1.lic_id = t3.id JOIN license_types t4 ON t3.type = t4.id WHERE t' at line 1. The SQL statement executed was: SELECT t2.f_name, t2.l_name, t3.lic_number, t4.part_number, t4.user_limit FROM user_licence t1 JOIN customers t2 ON t1.user_id = t2.idJOIN numbers t3 ON t1.lic_id = t3.id JOIN license_types t4 ON t3.type = t4.id WHERE t1.lic_id = 2' in C:\newOpenServer\domains\netscout.local\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\newOpenServer\domains\netscout.local\protected\models\ext\ExtUserLicence.php(44): CDbCommand->queryAll()
+#2 C:\newOpenServer\domains\netscout.local\protected\helpers\GenLic.php(59): ExtUserLicence->get_user_and_licence_info('2')
+#3 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(53): GenLic::generateLic('2')
+#4 [internal function]: ServiceController->actionGenLic('2')
+#5 C:\newOpenServer\domains\netscout.local\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ServiceController), Array)
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ServiceController), Object(ReflectionMethod), Array)
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('genlic')
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/genlic')
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/service/genlic/2
+HTTP_REFERER=http://netscout.local/service/index
+---

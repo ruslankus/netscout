@@ -57,7 +57,7 @@ class GenLic
     public static function generateLic($id)
     {
         $arrData = ExtUserLicence::model()->get_user_and_licence_info($id);
-        Debug::d($arrData);
+        //Debug::d($arrData);
             //Формат лицензионного файла
         $license_header = "[HEADER]"; //заголовок
         //$license_key = "KDC-POD-45D-12D"; //лицензионный ключ

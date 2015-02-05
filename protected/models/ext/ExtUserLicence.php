@@ -41,7 +41,7 @@ Class ExtUserLicence extends UserLicence
         $sql .= "WHERE t1.lic_id = ".(int)$id;
         
         $con = $this->dbConnection;
-        $retData=$con->createCommand($sql)->queryAll();
+        $retData=$con->createCommand($sql)->queryRow();
         
         return $retData;
     

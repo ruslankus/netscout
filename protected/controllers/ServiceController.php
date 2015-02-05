@@ -25,6 +25,25 @@ class ServiceController extends Controller
                 
         $this->render('account', array('arrUsrData' => $arrUsrData));
 	}
+    
+    
+    public function actionCompList(){
+        
+        $xmlData = $this->curl_get_data();
+        $objXml = simplexml_load_string($xmlData); 
+        
+        //Debug::d($objXml);
+        
+        $this->render('comp_list',array('objXml' => $objXml));
+    }//actionCompList
+    
+    
+    public function actionCompInfo($ip){
+        $xmlData = $this->curl_get_data($ip);
+        $objXml = simplexml_load_string($xmlData); 
+        
+        Debug::d($objXml);   
+    }
      
      
 	public function actionLogin()
@@ -47,6 +66,9 @@ class ServiceController extends Controller
 		}    
 		$this->render('login', array('form_model' => $form_model));
 	}//end login
+    
+    
+    
     
     
     public function actionGenLic($id){
@@ -103,6 +125,50 @@ class ServiceController extends Controller
     {
         Yii::app()->user->logout(false);
         $this->redirect('login');
-    }        
+    }
+    
+    
+    
+    public function actionDownload(){
+        $filename = 'netscout.rar';
+        header('Content-type: application/txt');//тут тип
+        header('Content-Disposition: attachment; filename='.$filename);
+        readfile($filename);
+        Yii::app()->end();
+    }
+    
+    
+    
+  /*------------------------------- pivate data -----------------------------------------*/
+    
+   
+    private $ltGate = 'http://192.168.1.129/?action=last';
+    private $flGate = 'http://192.168.1.129/?action=single&ip=';
+    
+    private function curl_get_data($comp_ip = null){
+        
+        if(!empty($comp_ip)){
+            $url = $this->flGate.$comp_ip;
+        }else{
+            $url = $this->ltGate;
+        }
+           
+        $curl = curl_init(); //инициализация сеанса
+        curl_setopt($curl, CURLOPT_URL, $url); //урл сайта к которому обращаемся 
+        curl_setopt($curl, CURLOPT_HEADER,false); //выводим заголовки
+        curl_setopt($curl, CURLOPT_POST, true); //передача данных методом POST
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER,true); //теперь curl вернет нам ответ, а не выведет
+        
+            
+        
+        curl_setopt($curl, CURLOPT_USERAGENT, 'MSIE 5'); //эта строчка как-бы говорит: "я не скрипт, я IE5" :)
+                
+        $res = curl_exec($curl);
+        curl_close($curl);
+       
+        return $res;
+
+    }// get_card_ballance
+    
     
 }

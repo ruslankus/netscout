@@ -8,9 +8,9 @@
     <div class="hr"></div>
     <!--<div class="content-block login-block">-->
 		
-		<h2>Quisque augue tortor</h2>
-        <p class="in-login-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-		<a class="button download-button buttons-backgrounds" href="#" >Download</a>
+		<h2>Download last version</h2>
+        <p class="in-login-p">Here you can download the latest version of the Netscout Monitoring Tool. Start monitoring your servers after downloading the application and verification key. </p>
+		<a class="button download-button buttons-backgrounds" href="/service/download" >Download</a>
 		<div class="hr"></div>
 		<div id="add-new-key">
 			<h2>Add new key</h2>

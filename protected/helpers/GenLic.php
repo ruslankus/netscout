@@ -75,7 +75,7 @@ class GenLic
         $max_pc_to_see = (int)($arrData['user_limit']); //максимальный размер локальной сети
         //$max_pc_to_see = 50;
         $footer = "[FOOTER]"; //футер
-        
+        //Debug::d($arrData);
         //запись
         $filename = "license.lic";
         $file = fopen($filename,"wb"); //открыть файл для бинарной записи

@@ -16,10 +16,7 @@
         <div class="lang-hlder">Lang: <a href="#">EN</a>&nbsp;/&nbsp;<a href="#">LT</a></div>
                 
         <div class="logged-info">Hello <span>Vasia Pupkin</span> <a href="/service/logout">logout</a></div>
-        <ul class="menu-logged">
-            <li><a href="#">Your detail</a></li>
-            <li><a href="#">Data center</a></li>
-        </ul>
+        <?php $this->widget('application.widgets.AccountMenu');?>
         
     </div>
 </header>

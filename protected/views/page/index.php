@@ -1,12 +1,4 @@
-<div class="big-logo-block">
-    <div class="in-line-content">
-        <div class="writing-block">
-            <h5>Donec sit amet</h5>
-            <p>Mauris gravida sapien orci, nec porttitor nibh sagittis eget. Maecenas odio diam, viverra ac feugiat vitae, vestibulum ac elit.</p>
-            <a href="#" class="button">Learn more</a>
-        </div>
-    </div>
-</div><!--/big-logo-block -->
+<?php $this->widget('application.widgets.Banner');?>
 
 <div class="long-line-wrapper">
     <div class="wrapper-940">

@@ -16,8 +16,8 @@ class Trl
     }
     
     private function __construct() {
-        //$currLng = Yii::app()->language;
-        $currLng = "en";
+        $currLng = Yii::app()->language;
+        //$currLng = "en";
         $this->_arrLabels = ExtLabels::model()->getLabels($currLng);
         //$this->_arrMessages = ExtMessage::model()->getMessage($currLng);
     }
@@ -27,8 +27,9 @@ class Trl
     public function getLabel($labelName)
     {
         if(array_key_exists($labelName,$this->_arrLabels)){
-            if(empty( $this->_arrLabels[$labelName])){
-                return '!_'.$this->_arrLabels[$labelName];                    
+            $trim_label_value = trim($this->_arrLabels[$labelName]);
+            if(empty($trim_label_value)){
+                return '!_'. $labelName;                    
             }else{
                 return $this->_arrLabels[$labelName];  
             }

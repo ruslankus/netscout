@@ -11,11 +11,11 @@
 <body>
 <header class="header">
     <div class="header-internal">
-        <a id="logo-block" href="#"></a>
+        <a id="logo-block" href="/"></a>
         
          <?php $this->widget('application.widgets.MainMenu');?>
         
-        <div class="lang-hlder">Lang: <a href="#">EN</a>&nbsp;/&nbsp;<a href="#">LT</a></div>
+        <?php $this->widget('application.widgets.LngMenu');?>
     </div>
 </header>
 

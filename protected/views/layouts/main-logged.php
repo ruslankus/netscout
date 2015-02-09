@@ -11,7 +11,7 @@
 <body>
 <header class="header">
     <div class="header-internal">
-        <a id="logo-block" href="#"></a>
+        <a id="logo-block" href="/"></a>
                 
         <div class="lang-hlder">Lang: <a href="#">EN</a>&nbsp;/&nbsp;<a href="#">LT</a></div>
                 

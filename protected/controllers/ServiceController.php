@@ -4,12 +4,15 @@ class ServiceController extends Controller
      public $layout='//layouts/main-logged';       
      
      protected function beforeAction($action) {
+        
+        $current_lng = Yii::app()->language;
+
         $objAction = Yii::app()->controller->action;
         $objUser = Yii::app()->user;
         if ($objAction->id !=='login' && $objAction->id !=='register')                       
             if ($objUser->isGuest){
                 
-                $this->redirect("/service/login");
+                $this->redirect("/". $current_lng ."/service/login");
             }
      
         return parent::beforeAction($action);

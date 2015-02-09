@@ -467,7 +467,7 @@ h3
 .writing-block .button
 {
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     left: 0;
 }
 
@@ -547,7 +547,7 @@ h3
 {
     display: block;
     width: 100%;
-    height: 280px;
+    height: 340px;
     /*background-color: grey;*/
     text-align: center;
 }
@@ -581,12 +581,13 @@ h3
 .block-description
 {
     width: 235px;
-    min-height: 169px;
+    min-height: 250px;
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     padding: 15px;
     position: relative;
-    display: inline-block;
+    display:block;
+	float:left;
     margin-top: 10px;
 }
 .block-description:nth-child(2)

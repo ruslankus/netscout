@@ -12,36 +12,39 @@
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
     
 	<div id="data-room-boxes-wrapper">
-	
-		<div class="data-room-box">
-			<div class="image-wrapper">			
-				<img src="<?php echo Yii::app()->request->baseUrl?>/img/server-icon.png" />
-			</div>
-			
-			<div class="data-room-desc">	
-				<h3>Data centre title</h3>
-				<p>IP: 10.0.101.105</p>
-				<a class="button edit-data">Edit</a>
-			</div>
-			
-		
-		</div>
-			
-		<div class="data-room-box">
-			<div class="image-wrapper">
-					<img src="<?php echo Yii::app()->request->baseUrl?>/img/server-icon.png" />
-			</div>
+        <?php if(!empty($arrDc)):?>
+            <?php foreach ($arrDc as $row):?>
+            <div class="data-room-box">
+                <div class="image-wrapper">			
+                    <img src="<?php echo Yii::app()->request->baseUrl?>/img/server-icon.png" />
+                </div>
 
-			<div class="data-room-desc">
-				<h3>Data centre title</h3>
-				<p>IP: 10.0.101.105</p>
-				<a class="button edit-data">Edit</a>
-			</div>
+                <div class="data-room-desc">	
+                    <h3>
+                        <a href="/service/complist/<?php echo $row['dc_id']; ?>">
+                            <?php echo $row['datacenter_name']; ?>
+                        </a>
+                    </h3>
+                    <p><?php echo $row['ip_address']; ?></p>
+                    <a data-dc="<?php echo $row['dc_id']?>" class="button edit-data">Edit</a>
+                </div>		
 
-		</div>
-		
-	
-		
+            </div><!--/data-room-box -->
+            <?php endforeach; ?>
+        <?php else: ?>
+            <div class="data-room-box">
+                <div class="image-wrapper">
+                    <img src="<?php echo Yii::app()->request->baseUrl?>/img/server-icon.png" />
+                </div>
+
+                <div class="data-room-desc">
+                    <h3>Enter title DC</h3>
+                    <p> Enter ip</p>
+                    <a data-type="new" class="button edit-data">Edit</a>
+                </div>
+            </div>
+        <?php endif; ?>  
+            
 	</div><!-- /data-room-boxes-wrapper -->
 	
 	

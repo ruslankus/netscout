@@ -57,12 +57,22 @@
 }
 
 #data-room-boxes-wrapper h3 {
-	color: #6b6b6b;
-	font-size: 27px;
-	font-family: neogramregular;
-	margin: 5px 20px 5px 20px;
-	display: inline;
-	padding: 2% 5% 2% 5%
+    text-align: center;
+    color: #6b6b6b;
+    font-size: 27px;
+    font-family: neogramregular;
+    margin: 5px 20px 5px 20px;
+    display: inline;
+    padding: 2% 5% 2% 5%
+}
+
+#data-room-boxes-wrapper h3 > a {
+    color: #6b6b6b;
+    text-decoration: none;
+}
+
+#data-room-boxes-wrapper h3 > a:hover {
+    text-decoration:underline;
 }
 
  #data-room-boxes-wrapper p {

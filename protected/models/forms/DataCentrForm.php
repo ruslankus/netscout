@@ -10,6 +10,7 @@ class DataCentrForm extends CFormModel
         return array(
             // username and password are required
             array('ip', 'required'),
+            array('name','default'),
             
         );
     }

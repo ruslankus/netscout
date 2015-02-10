@@ -2324,3 +2324,12 @@ REQUEST_URI=/ajax/LoadForm
 in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
 in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (10)
 in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 20:23:44 [warning] [application] Failed to set unsafe attribute "name" of "DataCentrForm".
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (21)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 20:46:17 [warning] [application] Failed to set unsafe attribute "name" of "DataCentrForm".
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (22)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 20:46:35 [warning] [application] Failed to set unsafe attribute "name" of "DataCentrForm".
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (22)
+in C:\newOpenServer\domains\netscout.local\index.php (13)

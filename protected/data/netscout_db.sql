@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2015-02-09 18:47:37
+Date: 2015-02-10 16:42:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -644,11 +644,13 @@ CREATE TABLE `user_licence` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `lic_id` int(11) NOT NULL,
+  `activation_date` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_licence
 -- ----------------------------
-INSERT INTO `user_licence` VALUES ('4', '5', '2');
-INSERT INTO `user_licence` VALUES ('5', '6', '3');
+INSERT INTO `user_licence` VALUES ('11', '5', '454', '1423568967');
+INSERT INTO `user_licence` VALUES ('12', '5', '452', '1423568996');
+INSERT INTO `user_licence` VALUES ('13', '5', '4', '1423572982');

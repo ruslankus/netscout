@@ -1630,3 +1630,697 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2015/02/10 14:10:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/10 14:38:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/10 14:38:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/10 15:57:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:336
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('genlic')
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/genlic/...')
+#5 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/service/genlic/454
+HTTP_REFERER=http://netscout.local/en/service
+---
+2015/02/10 16:44:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img/ser...')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/service/datacentr
+---
+2015/02/10 16:48:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img/ser...')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/service/datacentr
+---
+2015/02/10 16:48:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 16:48:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistema nerado užklausto veiksmo „img“.' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lt/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/lt/service/datacentr
+---
+2015/02/10 16:48:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 16:51:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 16:51:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/data_center.css".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('css/data_center...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/data_center.css
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 16:52:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 16:52:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 16:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 16:53:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 16:53:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/img/server-icon.png".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('en/img/server-i...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/img/server-icon.png
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 16:54:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/server-icon.png
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 17:03:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/data-centr-edit.js".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('js/data-centr-e...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/data-centr-edit.js
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/10 17:03:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/data-centr-edit.js".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('js/data-centr-e...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/data-centr-edit.js
+HTTP_REFERER=http://netscout.local/lt/service/datacentr
+---
+2015/02/10 18:11:00 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:11:16 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:12:46 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:12:49 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:12:58 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:13:00 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:13:01 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:13:01 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:13:02 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:13:02 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:13:22 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:13:23 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:16:35 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:16:43 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:16:44 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:16:44 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:16:45 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:16:46 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:16:46 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:17:12 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(8): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (8)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:24:02 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(10): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (10)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:28:46 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(10): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (10)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:31:14 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(10): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (10)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:35:18 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(10): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (10)
+in C:\newOpenServer\domains\netscout.local\index.php (13)
+2015/02/10 18:35:28 [error] [php] Object of class DataCentrForm could not be converted to string (C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\helpers\CHtml.php(628): inputField()
+#1 C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php(2): textField()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): AjaxController->renderInternal()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(869): AjaxController->renderFile()
+#5 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(10): AjaxController->renderPartial()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): AjaxController->actionLoadForm()
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): AjaxController->runAction()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): AjaxController->runActionWithFilters()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): AjaxController->run()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/ajax/LoadForm
+in C:\newOpenServer\domains\netscout.local\protected\views\ajax\_data_settings.php (2)
+in C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php (10)
+in C:\newOpenServer\domains\netscout.local\index.php (13)

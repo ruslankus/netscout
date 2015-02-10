@@ -20,14 +20,36 @@ class ServiceController extends Controller
 
      
      
-	public function actionIndex()
-	{
-		$objUsr = Yii::app()->user;
+    public function actionIndex()
+    {
+        $objUsr = Yii::app()->user;
+        $form_model = new AddKeyForm();
+        
+        if($_POST['AddKeyForm'])
+        {
+            $form_model->attributes = $_POST['AddKeyForm'];
+            if($form_model->validate()){
+                $objUsrLic = new UserLicence();
+                $objUsrLic->user_id = $objUsr->id;
+                $objUsrLic->lic_id = $form_model->keyId;
+                $objUsrLic->activation_date = time();
+                if($objUsrLic->save()){
+                    $form_model->newkey = null;
+                }              
+            }        
+        }
         
         $arrUsrData = ExtUserLicence::model()->get_user_license_info($objUsr->id);
-                
-        $this->render('account', array('arrUsrData' => $arrUsrData));
-	}
+            
+        $this->render('account', array('arrUsrData' => $arrUsrData,'form_model' => $form_model));
+    }
+    
+    
+    public function actionDataCentr(){
+        $objUsr = Yii::app()->user;
+        
+        $this->render('data_centr');
+    }
     
     
     public function actionCompList(){
@@ -43,9 +65,7 @@ class ServiceController extends Controller
     
     public function actionCompInfo($ip){
         $xmlData = $this->curl_get_data($ip);
-        $objXml = simplexml_load_string($xmlData); 
-        
-        Debug::d($objXml);   
+        $objXml = simplexml_load_string($xmlData);          
     }
      
      
@@ -73,10 +93,13 @@ class ServiceController extends Controller
     
     
     
-    
+    /**
+     * Function for generating license from key;
+     * @param $id - key Id
+     */
     public function actionGenLic($id){
         GenLic::generateLic($id);
-    }
+    }// genLic
      
      
      
@@ -142,7 +165,7 @@ class ServiceController extends Controller
     
     
     
-  /*------------------------------- pivate data -----------------------------------------*/
+  /*------------------------------- private data -----------------------------------------*/
     
    
     private $ltGate = 'http://192.168.1.129/?action=last';
@@ -171,7 +194,7 @@ class ServiceController extends Controller
        
         return $res;
 
-    }// get_card_ballance
+    }// curl_get_data
     
     
 }

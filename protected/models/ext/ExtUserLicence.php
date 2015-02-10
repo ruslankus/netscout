@@ -14,7 +14,7 @@ Class ExtUserLicence extends UserLicence
     public function get_user_license_info($id)
     {
         $sql  = "SELECT t1.lic_id, t1.user_id, t2.lic_number, t3.part_number,";
-        $sql .= "t3.decription, t3.`comment`,t3.user_limit ";
+        $sql .= "t3.decription, t3.`comment`,t3.user_limit, t1.activation_date ";
         $sql .= "FROM user_licence t1 ";
 	    $sql .= "JOIN numbers t2 ON t1.lic_id = t2.id ";
 	    $sql .= "JOIN license_types t3 ON t2.type = t3.id ";

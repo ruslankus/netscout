@@ -7,6 +7,7 @@
  * @property integer $id
  * @property integer $user_id
  * @property integer $lic_id
+ * @property integer $activation_date
  */
 class UserLicence extends CActiveRecord
 {
@@ -27,10 +28,10 @@ class UserLicence extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('user_id, lic_id', 'required'),
-			array('user_id, lic_id', 'numerical', 'integerOnly'=>true),
+			array('user_id, lic_id, activation_date', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, user_id, lic_id', 'safe', 'on'=>'search'),
+			array('id, user_id, lic_id, activation_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +55,7 @@ class UserLicence extends CActiveRecord
 			'id' => 'ID',
 			'user_id' => 'User',
 			'lic_id' => 'Lic',
+			'activation_date' => 'Activation Date',
 		);
 	}
 
@@ -78,6 +80,7 @@ class UserLicence extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('lic_id',$this->lic_id);
+		$criteria->compare('activation_date',$this->activation_date);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

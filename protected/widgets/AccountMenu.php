@@ -2,9 +2,8 @@
 class AccountMenu extends CWidget
 {
     public function run(){
-        
-        $objMenu = Menu::model()->findAll();
-        
-        $this->render('account_menu',array('objMenu' =>$objMenu));
+        $current_lng = Yii::app()->language;
+       
+        $this->render('account_menu',array('lng' => $current_lng));
     }//run   
 }    

@@ -14,10 +14,12 @@
 		<div class="hr"></div>
 		<div id="add-new-key">
 			<h2>Add new key</h2>
-			<form action="" method="post">
-				<input type="text" name="new-key" id="add-new-key-input-field" value="Product key(12 symbols)" />
+			 <?php $form=$this->beginWidget('CActiveForm', array('enableAjaxValidation'=>false)); ?>
+                <?php echo $form->textField($form_model,'newkey',array('id' => 'add-new-key-input-field', 'placeholder' =>'12 simbols XXXX-XXXX-XXXX'));?>    
+				
 				<input type="submit" class="button buttons-backgrounds" id="add-new-key-submit" value="Add">
-			</form>
+                <?php echo $form->error($form_model,'newkey'); ?>
+			<?php $this->endWidget();?>
 		</div>
 		<!--
 				end of id="add-new-key"
@@ -42,7 +44,7 @@
 						<a href="/service/genlic/<?php echo $data['lic_id']?>" class="button buttons-backgrounds">Download licence</a>
 					</div>
 					<div class="user-key-dates">
-						<text>Activation date: 16.10.2014</text>
+						<text>Activation date: <?php echo date("d.m.Y",$data['activation_date']);?></text>
 					</div>
 				</li>
 				<div class="hr"></div><!-- This div appears after every list item-->

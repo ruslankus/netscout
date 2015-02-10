@@ -13,7 +13,7 @@
     <div class="header-internal">
         <a id="logo-block" href="/"></a>
                 
-        <div class="lang-hlder">Lang: <a href="#">EN</a>&nbsp;/&nbsp;<a href="#">LT</a></div>
+        <?php $this->widget('application.widgets.LngMenu');?>
                 
         <div class="logged-info">Hello <span>Vasia Pupkin</span> <a href="/service/logout">logout</a></div>
         <?php $this->widget('application.widgets.AccountMenu');?>
@@ -46,5 +46,6 @@
     </div>
 </div>
 
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.2.min.js"></script>
 </body>
 </html>

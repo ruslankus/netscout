@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2015-02-10 16:42:50
+Date: 2015-02-10 19:03:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,6 +34,41 @@ CREATE TABLE `customers` (
 -- ----------------------------
 INSERT INTO `customers` VALUES ('5', 'Test', 'Vasia', 'Pupkin', '$1$WT4.nR2.$CHdd7aZsUz/.QA9TQYSfK.', '4321-4321-4321');
 INSERT INTO `customers` VALUES ('6', 'vasia', 'Dima ', 'Hitrov', '$1$Cq2.ja5.$unlIAvy34YnBnXjymTBqe1', '4444-4444-4444');
+
+-- ----------------------------
+-- Table structure for `datacentres`
+-- ----------------------------
+DROP TABLE IF EXISTS `datacentres`;
+CREATE TABLE `datacentres` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `datacenter_name` varchar(30) DEFAULT NULL,
+  `ip_address` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of datacentres
+-- ----------------------------
+INSERT INTO `datacentres` VALUES ('1', null, '212.65.42.34');
+INSERT INTO `datacentres` VALUES ('2', 'DC', '12333333');
+INSERT INTO `datacentres` VALUES ('3', 'rtrtrtr', '343434');
+INSERT INTO `datacentres` VALUES ('4', 'dc1', '213.23.23.34');
+
+-- ----------------------------
+-- Table structure for `dc_user`
+-- ----------------------------
+DROP TABLE IF EXISTS `dc_user`;
+CREATE TABLE `dc_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dc_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of dc_user
+-- ----------------------------
+INSERT INTO `dc_user` VALUES ('1', '4', '5');
 
 -- ----------------------------
 -- Table structure for `labels`

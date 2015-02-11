@@ -2605,3 +2605,133 @@ Stack trace:
 REQUEST_URI=/ajax/LoadEditForm?id=5
 HTTP_REFERER=http://netscout.local/service/datacentr
 ---
+2015/02/11 20:09:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "saveEditData".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('saveEditData')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('saveEditData')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('ajax/saveEditDa...')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ajax/saveEditData/?id=7
+HTTP_REFERER=http://netscout.local/service/datacentr
+---
+2015/02/11 20:25:36 [error] [exception.CException] exception 'CException' with message 'AjaxController cannot find the requested view "_data_edit_setting".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:878
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\protected\controllers\AjaxController.php(89): CController->renderPartial('_data_edit_sett...', Array)
+#1 [internal function]: AjaxController->actionSaveEditData('7')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(AjaxController), Array)
+#3 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AjaxController), Object(ReflectionMethod), Array)
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('saveEditData')
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('ajax/saveEditDa...')
+#9 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ajax/saveEditData/?id=7
+HTTP_REFERER=http://netscout.local/service/datacentr
+---
+2015/02/11 20:33:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:336
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('genlic')
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/genlic/...')
+#5 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/service/genlic/4
+HTTP_REFERER=http://netscout.local/en/service
+---
+2015/02/11 20:34:10 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:336
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('genlic')
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/genlic/...')
+#5 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/service/genlic/454
+HTTP_REFERER=http://netscout.local/en/service
+---
+2015/02/11 20:58:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/preloaders/server-preloader.gif
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/11 20:58:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/preloaders/server-preloader.gif
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/11 20:59:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/preloaders".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('img/preloaders')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/img/preloaders/server-preloader.gif
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/11 20:59:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/preloaders".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('img/preloaders')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/img/preloaders/server-preloader.gif
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/11 20:59:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/preloaders".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('img/preloaders')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/img/preloaders/server-preloader.gif
+---
+2015/02/11 21:01:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/preloaders".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('img/preloaders')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/img/preloaders/server-preloader.gif
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---
+2015/02/11 21:02:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/preloaders".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('img/preloaders')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/img/preloaders/server-preloader.gif
+---
+2015/02/11 21:02:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/img')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/en/service/img/preloaders/server-preloader.gif
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---

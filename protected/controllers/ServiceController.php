@@ -59,12 +59,15 @@ class ServiceController extends Controller
      */
     public function actionCompList($id = null){
         
-        //$xmlData = $this->curl_get_data();
-        //$objXml = simplexml_load_string($xmlData); 
+        //$xmlData = $this->curl_get_data()
         
-        //Debug::d($objXml);
         
-        $this->render('comp_list');
+        //$objXml = simplexml_load_string($xmlData);
+        
+        $objXml = simplexml_load_file('all_comps_sql.xml');
+        
+        
+        $this->render('comp_list_old',array('objXml' => $objXml));
     }//actionCompList
     
     
@@ -173,7 +176,7 @@ class ServiceController extends Controller
   /*------------------------------- private data -----------------------------------------*/
     
    
-    private $ltGate = 'http://192.168.1.129/?action=last';
+    private $ltGate = 'http://192.168.1.135/?action=last';
     private $flGate = 'http://192.168.1.129/?action=single&ip=';
     
     private function curl_get_data($comp_ip = null){

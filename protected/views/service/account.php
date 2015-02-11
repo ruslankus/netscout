@@ -41,7 +41,7 @@
 						<text class="desc-type">Key Limit:<b>[<?php echo $data['user_limit'];?> users]</b></text>
 					</div>
 					<div class="download-licence-button">
-						<a href="/service/genlic/<?php echo $data['lic_id']?>" class="button buttons-backgrounds">Download licence</a>
+						<a href="/service/genlic?id=<?php echo $data['lic_id']?>" class="button buttons-backgrounds">Download licence</a>
 					</div>
 					<div class="user-key-dates">
 						<text>Activation date: <?php echo date("d.m.Y",$data['activation_date']);?></text>

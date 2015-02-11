@@ -63,6 +63,37 @@ class AjaxController extends Controller
             
             //exception
         }
-    }//actionSavedata    
+    }//actionSavedata
+    
+    
+    public function actionSaveEditData($id){
+        
+        $request = Yii::app()->request;
+        $userId = Yii::app()->user->id;
+        $objDc = Datacentres::model()->findByPk((int)$id);
+        
+        if($request->isAjaxRequest){
+            
+            $form_model = new DataCentrForm();
+            $form_model->attributes = $_POST['DataCentrForm'];
+            
+            if($form_model->validate()){
+                $objDc->ip_address = $form_model->full_ip;
+                $objDc->datacenter_name = $form_model->name;
+                if($objDc->update()){
+                     $this->renderPartial('_data_succ',array('name'=> $form_model->name,
+                         'ip' => $form_model->full_ip,'dc_id' => $objDc->id));
+                     Yii::app()->end();        
+                }
+            }else{
+                $this->renderPartial('_data_edit_settings',array('form_model' => $form_model,'dc_id' => $objDc->id ));
+            }//end: if($form_model->validate())
+                
+        }else{
+            //exception
+        }
+        
+        
+    }//actionSaveEditData    
     
 }//end:class    

@@ -26,7 +26,7 @@
                         </a>
                     </h3>
                     <p><?php echo $row['ip_address']; ?></p>
-                    <a data-dc="<?php echo $row['dc_id']?>" class="button edit-data">Edit</a>
+                    <a data-new='0' data-dc="<?php echo $row['dc_id']?>" class="button edit-data">Edit</a>
                 </div>		
 
             </div><!--/data-room-box -->
@@ -40,7 +40,7 @@
                 <div class="data-room-desc">
                     <h3>Enter title DC</h3>
                     <p> Enter ip</p>
-                    <a data-type="new" class="button edit-data">Edit</a>
+                    <a data-new="1" class="button edit-data">Edit</a>
                 </div>
             </div>
         <?php endif; ?>  

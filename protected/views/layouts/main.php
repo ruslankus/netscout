@@ -25,15 +25,7 @@
 
 <div class="footer-line">
     <div class="footer-internal">
-        <ul class="bottom-menu">
-            <li><a href="#">Main</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contacts</a></li>
-        </ul>
+         <?php $this->widget('application.widgets.FootMenu');?>
     </div>
 </div>
 

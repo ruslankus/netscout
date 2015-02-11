@@ -1,5 +1,18 @@
-*
-{
+.clearfix {
+  *zoom: 1;}
+  
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;}
+  
+.clearfix:after {
+  clear: both;} 
+ 
+/*-------------*/  
+
+* {
     margin: 0;
     padding: 0;
 }

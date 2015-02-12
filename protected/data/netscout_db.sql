@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2015-02-10 19:03:07
+Date: 2015-02-12 19:14:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -44,7 +44,7 @@ CREATE TABLE `datacentres` (
   `datacenter_name` varchar(30) DEFAULT NULL,
   `ip_address` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of datacentres
@@ -53,6 +53,9 @@ INSERT INTO `datacentres` VALUES ('1', null, '212.65.42.34');
 INSERT INTO `datacentres` VALUES ('2', 'DC', '12333333');
 INSERT INTO `datacentres` VALUES ('3', 'rtrtrtr', '343434');
 INSERT INTO `datacentres` VALUES ('4', 'dc1', '213.23.23.34');
+INSERT INTO `datacentres` VALUES ('6', 'fgdgd', '23.255.34.34');
+INSERT INTO `datacentres` VALUES ('7', 'test2', '192.168.1.135');
+INSERT INTO `datacentres` VALUES ('8', 'dc id', '34.43.34.34');
 
 -- ----------------------------
 -- Table structure for `dc_user`
@@ -62,13 +65,17 @@ CREATE TABLE `dc_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `dc_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`),
+  KEY `dc_user_ibfk_1` (`dc_id`),
+  CONSTRAINT `dc_user_ibfk_1` FOREIGN KEY (`dc_id`) REFERENCES `datacentres` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dc_user
 -- ----------------------------
-INSERT INTO `dc_user` VALUES ('1', '4', '5');
+INSERT INTO `dc_user` VALUES ('3', '6', '5');
+INSERT INTO `dc_user` VALUES ('4', '7', '5');
+INSERT INTO `dc_user` VALUES ('5', '8', '5');
 
 -- ----------------------------
 -- Table structure for `labels`
@@ -149,7 +156,7 @@ CREATE TABLE `license_types` (
   `user_limit` tinyint(4) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of license_types
@@ -163,6 +170,7 @@ INSERT INTO `license_types` VALUES ('6', 'NET02-01STD0100-00006', 'Netscout Serv
 INSERT INTO `license_types` VALUES ('7', 'NET02-01PRF0010-00007', 'Netscout Server Monitoring Tool', '10', 'Professional Edition limited to 10 Users');
 INSERT INTO `license_types` VALUES ('8', 'NET02-01PRF0050-00008', 'Netscout Server Monitoring Tool', '50', 'Professional Edition limited to 50 Users');
 INSERT INTO `license_types` VALUES ('9', 'NET02-01PRF0100-00009', 'Netscout Server Monitoring Tool', '100', 'Professional Edition limited to 100 Users');
+INSERT INTO `license_types` VALUES ('10', 'NET02-TESTKEY-00000', 'Netscout Server Monitoring Tool', '127', 'Testing Key Unlimited');
 
 -- ----------------------------
 -- Table structure for `menu`
@@ -194,7 +202,7 @@ CREATE TABLE `numbers` (
   `type` int(11) DEFAULT NULL,
   `used` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=456 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=461 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of numbers
@@ -649,6 +657,11 @@ INSERT INTO `numbers` VALUES ('452', '6R0L-2IXH-33ZB', '9', null);
 INSERT INTO `numbers` VALUES ('453', '93ZE-0M3M-C829', '9', null);
 INSERT INTO `numbers` VALUES ('454', 'O158-0NVU-3WZ2', '9', null);
 INSERT INTO `numbers` VALUES ('455', '1HW7-K1I8-895L', '9', null);
+INSERT INTO `numbers` VALUES ('456', '1HW7-K1BR-895L', '10', null);
+INSERT INTO `numbers` VALUES ('457', 'O158-0NVU-3K52', '10', null);
+INSERT INTO `numbers` VALUES ('458', '93ZE-4M3M-C229', '10', null);
+INSERT INTO `numbers` VALUES ('459', '6R3L-2SXH-33ZB', '10', null);
+INSERT INTO `numbers` VALUES ('460', 'YAW4-KISJ-QP7S', '10', null);
 
 -- ----------------------------
 -- Table structure for `pages`

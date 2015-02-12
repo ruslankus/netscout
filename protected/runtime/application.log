@@ -2735,3 +2735,75 @@ Stack trace:
 REQUEST_URI=/en/service/img/preloaders/server-preloader.gif
 HTTP_REFERER=http://netscout.local/en/service/datacentr
 ---
+2015/02/12 14:31:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/12 14:42:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cominfo".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('cominfo')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('cominfo')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/cominfo')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/service/cominfo
+---
+2015/02/12 14:45:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/data_server.css".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('css/data_server...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/data_server.css
+HTTP_REFERER=http://netscout.local/service/compinfo
+---
+2015/02/12 14:45:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/data_server.css".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('css/data_server...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/data_server.css
+HTTP_REFERER=http://netscout.local/service/compinfo
+---
+2015/02/12 14:46:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/data_server.css".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('css/data_server...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/data_server.css
+HTTP_REFERER=http://netscout.local/service/compinfo
+---
+2015/02/12 14:51:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/charts-func-dinamic.js".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('js/charts-func-...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/charts-func-dinamic.js
+HTTP_REFERER=http://netscout.local/service/compinfo?ip=192.168.1.116
+---
+2015/02/12 14:51:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/charts-func-dinamic.js".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('js/charts-func-...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/charts-func-dinamic.js
+HTTP_REFERER=http://netscout.local/service/compinfo?ip=192.168.1.116
+---
+2015/02/12 14:52:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/charts-func-dinamic.js".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('js/charts-func-...')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/charts-func-dinamic.js
+HTTP_REFERER=http://netscout.local/service/compinfo?ip=192.168.1.116
+---

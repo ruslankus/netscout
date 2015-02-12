@@ -71,9 +71,11 @@ class ServiceController extends Controller
     }//actionCompList
     
     
-    public function actionCompInfo($ip){
-        $xmlData = $this->curl_get_data($ip);
-        $objXml = simplexml_load_string($xmlData);          
+    public function actionCompInfo($ip = nul){
+        //$xmlData = $this->curl_get_data($ip);
+        //$objXml = simplexml_load_string($xmlData);  
+        
+        $this->render('comp_info_demo');        
     }
      
      

@@ -20,9 +20,10 @@
 		</div>
     </div><!--/data-room-report --> 
 
-		<p class="in-login-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex </p>
+		<p class="in-login-p">If it is your first time setting up a connection with your servers,
+		 click edit to enter the IP address of the servers you want to monitor.
+		  Add a title and then press save. You will then have the ability to access that server.
+		   You can add additional servers only if you have a unique verification key for each.  </p>
         
         <?php if($restrict):?>
             <p>Your licence ammount doesn't allow you to add DC</p>

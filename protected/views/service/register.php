@@ -11,7 +11,22 @@
             <table>
                 <input type="hidden" value="" name="Register[anti_cap]">
                 <?php echo $form->error($form_model,'common');?>    
-                <tbody><tr>
+                <tbody>
+                <tr>
+                    <td><?php echo $form->label($form_model,'f_name')?></td>
+                    <td>
+                        <?php echo $form->textField($form_model,'f_name');?>
+                        <?php echo $form->error($form_model,'f_name');?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><?php echo $form->label($form_model,'l_name')?></td>
+                    <td>
+                        <?php echo $form->textField($form_model,'l_name'); ?>
+                        <?php echo $form->error($form_model,'l_name')?>
+                    </td>
+                </tr>
+                <tr>
                     <td><?php echo $form->label($form_model,'login'); ?>:</td>
                     <td>
                         <?php echo $form->textField($form_model,'login');?>

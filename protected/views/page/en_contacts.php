@@ -1,8 +1,8 @@
 <div class="separator-gradient"></div>
 <div class="main-wrapper">
-    <div class="block-header"><h1>Contacts</h1></div>
+    <div class="block-header"><h1>Contacts Us</h1></div>
     <div class="hr"></div>
-    <div class="content-header"><h2>Quisque augue tortor</h2></div>
+    <div class="content-header"><h2>We can be reached at </h2></div>
 
     <div class="contacts-half-small">
         <ul class="contact-params">
@@ -17,4 +17,3 @@
 
     <div style="clear: both;"></div>
 </div>
-act

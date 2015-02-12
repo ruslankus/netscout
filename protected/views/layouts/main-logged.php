@@ -15,7 +15,7 @@
                 
         <?php $this->widget('application.widgets.LngMenu');?>
                 
-        <div class="logged-info">Hello <span>Vasia Pupkin</span> <a href="/service/logout">logout</a></div>
+        <?php $this->widget('application.widgets.AdminHello');?>
         <?php $this->widget('application.widgets.AccountMenu');?>
         
     </div>

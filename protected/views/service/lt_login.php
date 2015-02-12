@@ -4,8 +4,10 @@
     <div class="hr"></div>
     <div class="content-block login-block">
 
-        <p class="in-login-p">Suspendisse vehicula eget diam non venenatis. Pellentesque lacinia erat mauris. Integer pellentesque faucibus dignissim. Curabitur ut posuere risus. Nulla sed neque ac magna vestibulum mattis eget ut nunc. Fusce iaculis sed ligula id consectetur. Vestibulum sollicitudin et justo nec commodo. Mauris et dui sit amet purus convallis hendrerit. </p>
-
+        <p class="in-login-p">
+        Įveskite savo prisijungimo vardą ir slaptažodį, kad galėtumėte prisijungti prie prietaisų skydelio.
+         Jei jūs dar neturite paskyros, spauskite „registruotis“ ir užpildykite registracijos formą.
+        </p>
         <?php $form = $this->beginWidget('CActiveForm',array('enableAjaxValidation'=>false,'htmlOptions'=>array('class'=>'clearfix'))); ?>
             <table>
                 <tbody><tr>

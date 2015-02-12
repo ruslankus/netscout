@@ -6,12 +6,12 @@
 ?> 
 <div class="separator-gradient"></div>
 <div class="main-wrapper">
-    <div class="block-header"><h1>Data centre</h1></div>
+    <div class="block-header"><h1>Duomenų centras</h1></div>
     <div class="hr"></div>
     
     <div id="data-room-report" class="clearfix">
 		<div class="left">	
-            <h2>Data centre name</h2>
+            <h2>Serverio valdymo skydelis</h2>
             
         </div>
 		<div id="links" class="clearfix" >
@@ -20,10 +20,10 @@
 		</div>
     </div><!--/data-room-report --> 
 
-		<p class="in-login-p">If it is your first time setting up a connection with your servers,
-                    click edit to enter the IP address of the servers you want to monitor.
-                    Add a title and then press save. You will then have the ability to access that server.
-                    You can add additional servers only if you have a unique verification key for each. </p>
+		<p class="in-login-p">Jei pirmą kartą kuriate ryšį su savo serveriu,
+		 spauskite „redaguoti“ ir įveskite norimų stebėti serverių IP adresus.
+		  Parašykite serverio pavadinimą ir spauskite „išsaugoti“. Tada turėsite galimybę matyti šį serverį.
+		   Turėdami daugiau patvirtinimo raktų galėsite pridėti daugiau serverių. </p>
         
         <?php if($restrict):?>
             <p>Your licence ammount doesn't allow you to add DC</p>
@@ -50,7 +50,7 @@
 
             </div><!--/data-room-box -->
             <?php endforeach; ?>
-        <?php endif; ?>
+        <?php else: ?>
             <div class="data-room-box">
                 <div class="image-wrapper">
                     <img src="<?php echo Yii::app()->request->baseUrl?>/img/server-icon.png" />
@@ -62,7 +62,7 @@
                     <a data-new="1" data-lng="<?php echo $lng; ?>" class="button edit-data">Edit</a>
                 </div>
             </div>
-         
+        <?php endif; ?>  
             
 	</div><!-- /data-room-boxes-wrapper -->
 	

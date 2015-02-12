@@ -31,6 +31,7 @@ class AjaxController extends Controller
     public function actionSavedata(){
         $request = Yii::app()->request;
         $userId = Yii::app()->user->id;
+        $lng = Yii::app()->language;
         
         if($request->isAjaxRequest){
            
@@ -46,7 +47,7 @@ class AjaxController extends Controller
                     $objUserDc->dc_id = $objDc->id;
                     if($objUserDc->save()){
                         $this->renderPartial('_data_succ',array('name'=> $form_model->name,
-                         'ip' => $form_model->full_ip,'dc_id' => $objDc->id));
+                         'ip' => $form_model->full_ip,'dc_id' => $objDc->id, 'lng' => $lng));
                         Yii::app()->end();
                     }else{
                         Debug::d($objUserDc);

@@ -38,28 +38,22 @@
 
 <div class="long-line-wrapper">
     <div class="wrapper-940">
-        <div class="title-block-two"><h1>With the world’s largest mobile...</h1></div>
+        <div class="title-block-two"><h1>Here’s what users think…</h1></div>
 
         <div class="half">
             <div class="quote-block">
-                <div class="under-writing">Kirsty Nathoo</div>
-                <span><span></span></span>the world’s largest mobile threat dataset, and leveraging the power of millions of users, Lookout tackles the most important mobile security issues, from identifying emerging threats to preventing fraud and fighting cybercrime.<span><span></span></span>
+                <div class="under-writing">-Kiril Ivanov JSV Matros </div>
+                <span><span></span></span>The Netscout Monitoring Tool gives me control over the technology in my business like never before. I can be out of the office and not have to call my IT department every hour to find the out the status of my servers during an important project. The cloud-based solution is truly liberating. <span><span></span></span>
             </div>
-            <div class="quote-block">
-                <div class="under-writing">Christina Stembel</div>
-                <span><span></span></span>Pellentesque at pulvinar sapien. Nam tincidunt ultrices lacus eu malesuada. Curabitur vel hendrerit leo. Morbi luctus nibh ligula, nec porta mi luctus ut. Integer sagittis justo at sollicitudin dictum. Aliquam blandit erat est, eget faucibus enim mattis nec.<span><span></span></span>
-            </div>
+            
         </div>
 
         <div class="half right-sided">
             <div class="quote-block">
-                <div class="under-writing">Christina Stembel</div>
-                <span><span></span></span>Pellentesque at pulvinar sapien. Nam tincidunt ultrices lacus eu malesuada. Curabitur vel hendrerit leo. Morbi luctus nibh ligula, nec porta mi luctus ut. Integer sagittis justo at sollicitudin dictum. Aliquam blandit erat est, eget faucibus enim mattis nec.<span><span></span></span>
+                <div class="under-writing">-Ekaterina Spivak IT Director ZAO Ruslov</div>
+                <span><span></span></span>I am a very visual person who likes to see data presented in interesting ways, so it was fitting for me to use Netscout’s animated dashboard. I can get my server’s CPU, hard disk usage and temperature all through illustrated graphs, without needing to go through lists of complicated data. <span><span></span></span>
             </div>
-            <div class="quote-block">
-                <div class="under-writing">Kirsty Nathoo</div>
-                <span><span></span></span>the world’s largest mobile threat dataset, and leveraging the power of millions of users, Lookout tackles the most important mobile security issues, from identifying emerging threats to preventing fraud and fighting cybercrime.<span><span></span></span>
-            </div>
+            
         </div>
     </div>
 </div><!--/long-line-wrapper -->

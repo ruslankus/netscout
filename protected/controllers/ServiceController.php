@@ -49,8 +49,18 @@ class ServiceController extends Controller
         $objUsr = Yii::app()->user;
         $lng = Yii::app()->language;
         $arrDc = ExtDatacentres::model()->get_users_dc($objUsr->id);
-        //Debug::d($arrDc);
-        $this->render('data_centr',array('arrDc' => $arrDc,'lng' => $lng));
+        $lic_count = UserLicence::model()->countByAttributes(array('user_id' => $objUsr->id));
+                        
+        $dc_count = count($arrDc);
+        
+        if($dc_count > $lic_count){
+	    	 $this->render('data_centr_delete',array('arrDc' => $arrDc,'lng' => $lng));    
+        }else{
+	      //Debug::d($arrDc);
+		  $this->render($lng.'_data_centr',array('arrDc' => $arrDc,'lng' => $lng));  
+        }
+
+        
     }
     
     
@@ -70,7 +80,7 @@ class ServiceController extends Controller
             $this->render('data_centr_delete',array('arrDc' => $arrDc,'lng' => $lng));
         }else{             
             //Debug::d($arrDc);
-            $this->render('data_centr',array('arrDc' => $arrDc,'lng' => $lng,'restrict' => true));
+            $this->render($lng . '_data_centr',array('arrDc' => $arrDc,'lng' => $lng,'restrict' => true));
         }
     }
     
@@ -92,13 +102,14 @@ class ServiceController extends Controller
      * @param int $id - Data centre id 
      */
     public function actionCompList($id = null){
+	    $lng = Yii::app()->language;
         //$xmlData = $this->curl_get_data()        
         //$objXml = simplexml_load_string($xmlData);
         //$objXml = simplexml_load_file('all_comps_sql.xml');
         
         $objDc = Datacentres::model()->findByPk((int)$id);
        
-        $this->render('comp_list',array('objDc' => $objDc ));
+        $this->render($lng . '_comp_list',array('objDc' => $objDc ));
     }//actionCompList
     
     
@@ -112,7 +123,9 @@ class ServiceController extends Controller
      
 	public function actionLogin()
 	{
-		$this->layout = '//layouts/main';  
+		$this->layout = '//layouts/main';
+		$lng = Yii::app()->language;
+		  
         //if logged in - redirect to index
 		if(!Yii::app()->user->isGuest){
 		    $this->redirect('/service/index');
@@ -128,7 +141,7 @@ class ServiceController extends Controller
 		    }	
 	    
 		}    
-		$this->render('login', array('form_model' => $form_model));
+		$this->render($lng . '_login', array('form_model' => $form_model));
 	}//end login
     
     

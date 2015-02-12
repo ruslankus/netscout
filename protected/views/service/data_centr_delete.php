@@ -16,7 +16,6 @@
         </div>
 		<div id="links" class="clearfix" >
 			
-			<a class="button buttons-backgrounds" href="/<?php echo $lng;?>/service/adddc">Add Dc</a>
 		</div>
     </div><!--/data-room-report --> 
 

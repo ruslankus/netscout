@@ -37,28 +37,21 @@
 
 <div class="long-line-wrapper">
     <div class="wrapper-940">
-        <div class="title-block-two"><h1>With the world’s largest mobile...</h1></div>
+        <div class="title-block-two"><h1>Štai ką mano vartotojai</h1></div>
 
         <div class="half">
             <div class="quote-block">
-                <div class="under-writing">Kirsty Nathoo</div>
-                <span><span></span></span>the world’s largest mobile threat dataset, and leveraging the power of millions of users, Lookout tackles the most important mobile security issues, from identifying emerging threats to preventing fraud and fighting cybercrime.<span><span></span></span>
-            </div>
-            <div class="quote-block">
-                <div class="under-writing">Christina Stembel</div>
-                <span><span></span></span>Pellentesque at pulvinar sapien. Nam tincidunt ultrices lacus eu malesuada. Curabitur vel hendrerit leo. Morbi luctus nibh ligula, nec porta mi luctus ut. Integer sagittis justo at sollicitudin dictum. Aliquam blandit erat est, eget faucibus enim mattis nec.<span><span></span></span>
+                <div class="under-writing">Kiril Ivanov JSV Matros </div>
+                <span><span></span></span>Netscout serverių stebėsenos įrankis leidžia valdyti mano verslo technologijas kaip niekad anksčiau. Galiu ramiai būti išvykęs ir neskambinėti IT skyriui kas valandą dėl serverių veikimo svarbaus projekto metu. Debesijos sprendimas tikrai suteikia laisvę.<span><span></span></span>
             </div>
         </div>
 
         <div class="half right-sided">
             <div class="quote-block">
-                <div class="under-writing">Christina Stembel</div>
-                <span><span></span></span>Pellentesque at pulvinar sapien. Nam tincidunt ultrices lacus eu malesuada. Curabitur vel hendrerit leo. Morbi luctus nibh ligula, nec porta mi luctus ut. Integer sagittis justo at sollicitudin dictum. Aliquam blandit erat est, eget faucibus enim mattis nec.<span><span></span></span>
+                <div class="under-writing">Ekaterina Spivak IT Directorė ZAO Ruslov</div>
+                <span><span></span></span>Turiu vizualią atmintį, mėgstu matyti įdomiai pateiktus statistinius duomenis, todėl Netscout animuotas skydelis man labai tinka. Iliustruotose diagramose galiu matyti procesoriaus veiklą, temperatūrą, kietojo disko naudojimą ir man nereikia gilintis į sudėtingų duomenų aprašus.<span><span></span></span>
             </div>
-            <div class="quote-block">
-                <div class="under-writing">Kirsty Nathoo</div>
-                <span><span></span></span>the world’s largest mobile threat dataset, and leveraging the power of millions of users, Lookout tackles the most important mobile security issues, from identifying emerging threats to preventing fraud and fighting cybercrime.<span><span></span></span>
-            </div>
+            
         </div>
     </div>
 </div><!--/long-line-wrapper -->

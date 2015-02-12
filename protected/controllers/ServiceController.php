@@ -53,6 +53,40 @@ class ServiceController extends Controller
         $this->render('data_centr',array('arrDc' => $arrDc,'lng' => $lng));
     }
     
+    
+    public function actionAddDc(){
+        
+        $usrId = Yii::app()->user->id;
+        $lng = Yii::app()->language;
+        $lic_count = UserLicence::model()->countByAttributes(array('user_id' => $usrId));
+        $arrDc = ExtDatacentres::model()->get_users_dc($usrId);
+        $dc_count = count($arrDc);
+        
+        if($lic_count > $dc_count){
+            
+            $this->render('data_centr_allow',array('arrDc' => $arrDc,'lng' => $lng));
+          
+        }elseif($lic_count < $dc_count){
+            $this->render('data_centr_delete',array('arrDc' => $arrDc,'lng' => $lng));
+        }else{             
+            //Debug::d($arrDc);
+            $this->render('data_centr',array('arrDc' => $arrDc,'lng' => $lng,'restrict' => true));
+        }
+    }
+    
+    
+    /**
+     * @param $id int - Dc - id
+     */
+    public function actionDeleteDc($id){
+        $lng = Yii::app()->language;
+        $objDc = Datacentres::model()->findByPk($id);
+        if(!empty($objDc)){
+            $objDc->delete();
+            $this->redirect('/'.$lng.'/service/datacentr');
+        }
+    }
+    
     /**
      * 
      * @param int $id - Data centre id 

@@ -6,8 +6,8 @@ class AjaxController extends Controller
     public function actionLoadForm(){
         
         $form_model = new DataCentrForm();
-        
-        $this->renderPartial('_data_settings',array('form_model' => $form_model));
+        $lng = Yii::app()->language;
+        $this->renderPartial('_data_settings',array('form_model' => $form_model, 'lng' => $lng));
         Yii::app()->end();
     }
     
@@ -17,11 +17,12 @@ class AjaxController extends Controller
     public function actionLoadEditForm($id){
         $form_model = new DataCentrForm();
         $objDc = Datacentres::model()->findByPk($id);
+        $lng = Yii::app()->language;
         if(!empty($objDc)){
             $strIp = $objDc->ip_address;
             $arrIp = explode('.',$strIp);
             $this->renderPartial('_data_edit_settings',array('form_model' => $form_model,
-            'arrIp' => $arrIp, 'name'=> $objDc->datacenter_name, 'dc_id' => $objDc->id));    
+            'arrIp' => $arrIp, 'name'=> $objDc->datacenter_name, 'dc_id' => $objDc->id, 'lng' => $lng));    
         }
         
     }//actionLoadEditForm
@@ -107,11 +108,9 @@ class AjaxController extends Controller
         if(!empty($objDc)){
             $resXml = $this->curl_get_data($objDc->ip_address);
             @$objXml = simplexml_load_string($resXml);
-            if(!empty($objXml)){
-                $this->renderPartial('_comp_list',array('objDc' => $objDc , 'objXml' =>$objXml ));    
-            }else{
-                //error
-            }
+            
+            $this->renderPartial('_comp_list',array('objDc' => $objDc , 'objXml' =>$objXml ));   
+           
         }else{
             //error
         }

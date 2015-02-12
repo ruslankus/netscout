@@ -5,14 +5,15 @@ $( document ).ready(function() {
         $cont = $(this).parent();
         status = $(this).data('new');
         dcId = $(this).data('dc');
+        lng = $(this).data('lng');
         
         $cont.html('<div class="server-preloader"><img src="/img/preloaders/server-preloader.gif"/></div');
          
         if(status == 0){
            
-            $cont.load('/ajax/LoadEditForm?id='+dcId);    
+            $cont.load('/'+ lng +'/ajax/LoadEditForm?id='+dcId);    
         }else{
-            $cont.load('/ajax/LoadForm');
+            $cont.load('/'+ lng +'/ajax/LoadForm');
         }
       ;
         
@@ -27,13 +28,14 @@ $( document ).ready(function() {
         postData = $form.serializeArray();
         $cont =  $(this).parent().parent().parent();
         dcId = $(this).data('dc');
+        lng = $(this).data('lng');
         $cont.html('<div class="server-preloader"><img src="/img/preloaders/server-preloader.gif"/></div');
         //gruzim
         if(status == 0){
             
-            saveEditData($cont,postData,dcId); 
+            saveEditData($cont,postData,dcId,lng); 
         }else{
-            saveData($cont,postData);    
+            saveData($cont,postData,lng);    
         }        
         
         return false;
@@ -43,10 +45,10 @@ $( document ).ready(function() {
 });
 
 /*---------------------   obrabotchiki  ----------------------------------*/
-function saveData($objContaier, postData){
-    $objContaier.load("/ajax/savedata",postData);
+function saveData($objContaier, postData, lng){
+    $objContaier.load("/"+ lng +"/ajax/savedata",postData);
 }//saveData
 
-function saveEditData($objContaier, postData,dcId){
-    $objContaier.load('/ajax/saveEditData/?id='+ dcId, postData );
+function saveEditData($objContaier, postData,dcId ,lng){
+    $objContaier.load('/'+ lng +'/ajax/saveEditData/?id='+ dcId, postData );
 }

@@ -1,4 +1,4 @@
-<?php
+ <?php
     $cs = Yii::app()->clientScript;
     $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/data.css');
     $cs->registerScriptFile(Yii::app()->baseUrl.'/js/complist.js',CClientScript::POS_END);

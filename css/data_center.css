@@ -141,23 +141,27 @@
 	padding: 5px 0 5px 0
 }
 
-/* by Maxim */
+/* by Maxim  fixed by Ruslan*/
 
-#data-room-report {
-	display: table;
 
-}
+#data-room-report > .left {
+	float:left;
+	width:50%;}
 
-#data-room-report h2, #data-room-report p, #links{
-	display: table-cell;
-	float: left;
-}
-
+.left > p {
+	font-size:18px;
+	color: #5f5f5f; }
+	
+.left > p > span {
+	font-weight:bold;
+	text-transform:uppercase;}
+	
 #data-room-report h2 {
-	width: 50%;
 }
 
 #links {
+	float:right;
+	text-align:right;
 	vertical-align: middle;
 	width: 50%;
 	padding-top: 20px;

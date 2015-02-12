@@ -9,16 +9,25 @@
     <div class="block-header"><h1>Data centre</h1></div>
     <div class="hr"></div>
     
-    <div id="data-room-report">
-    	<h2>Some subtitle</h2>
-		<div id="links">
-        
-			<a class="button buttons-backgrounds" href="#">add DC</a>
-		
+    <div id="data-room-report" class="clearfix">
+		<div class="left">	
+            <h2>Data centre name</h2>
+            
+        </div>
+		<div id="links" class="clearfix" >
+			
+			<a class="button buttons-backgrounds" href="/<?php echo $lng;?>/service/adddc">Add Dc</a>
 		</div>
+    </div><!--/data-room-report --> 
 
-		<p class="in-login-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-    </div><!--/data-room-report -->
+		<p class="in-login-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex </p>
+        
+        <?php if($restrict):?>
+            <p>Your licence ammount doesn't allow you to add DC</p>
+        <?php endif;?>
+  
     
 	<div id="data-room-boxes-wrapper">
         <?php if(!empty($arrDc)):?>
@@ -35,7 +44,7 @@
                         </a>
                     </h3>
                     <p><?php echo $row['ip_address']; ?></p>
-                    <a data-new='0' data-dc="<?php echo $row['dc_id']?>" class="button edit-data">Edit</a>
+                    <a data-new='0' data-lng="<?php echo $lng;?>"  data-dc="<?php echo $row['dc_id']?>" class="button edit-data">Edit</a>
                 </div>		
 
             </div><!--/data-room-box -->
@@ -49,7 +58,7 @@
                 <div class="data-room-desc">
                     <h3>Enter title DC</h3>
                     <p> Enter ip</p>
-                    <a data-new="1" class="button edit-data">Edit</a>
+                    <a data-new="1" data-lng="<?php echo $lng; ?>" class="button edit-data">Edit</a>
                 </div>
             </div>
         <?php endif; ?>  

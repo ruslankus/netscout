@@ -8,8 +8,17 @@
 <div class="main-wrapper">
     <div class="block-header"><h1>Data centre</h1></div>
     <div class="hr"></div>
-    <div class="content-header"><h2>Some subtitle</h2></div>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    
+    <div id="data-room-report">
+    	<h2>Some subtitle</h2>
+		<div id="links">
+        
+			<a class="button buttons-backgrounds" href="#">add DC</a>
+		
+		</div>
+
+		<p class="in-login-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    </div><!--/data-room-report -->
     
 	<div id="data-room-boxes-wrapper">
         <?php if(!empty($arrDc)):?>
@@ -21,7 +30,7 @@
 
                 <div class="data-room-desc">	
                     <h3>
-                        <a href="/service/complist/<?php echo $row['dc_id']; ?>">
+                        <a href="/<?php echo $lng?>/service/complist/<?php echo $row['dc_id']; ?>">
                             <?php echo $row['datacenter_name']; ?>
                         </a>
                     </h3>

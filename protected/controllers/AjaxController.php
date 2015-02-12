@@ -71,6 +71,7 @@ class AjaxController extends Controller
         $request = Yii::app()->request;
         $userId = Yii::app()->user->id;
         $objDc = Datacentres::model()->findByPk((int)$id);
+        $lng = Yii::app()->language;
         
         if($request->isAjaxRequest){
             
@@ -82,11 +83,11 @@ class AjaxController extends Controller
                 $objDc->datacenter_name = $form_model->name;
                 if($objDc->update()){
                      $this->renderPartial('_data_succ',array('name'=> $form_model->name,
-                         'ip' => $form_model->full_ip,'dc_id' => $objDc->id));
+                         'ip' => $form_model->full_ip,'dc_id' => $objDc->id,'lng' => $lng));
                      Yii::app()->end();        
                 }
             }else{
-                $this->renderPartial('_data_edit_settings',array('form_model' => $form_model,'dc_id' => $objDc->id ));
+                $this->renderPartial('_data_edit_settings',array('form_model' => $form_model,'dc_id' => $objDc->id , 'lng' => $lng ));
             }//end: if($form_model->validate())
                 
         }else{
@@ -94,6 +95,68 @@ class AjaxController extends Controller
         }
         
         
-    }//actionSaveEditData    
+    }//actionSaveEditData 
+    
+    /**
+     * @param int $id - Data centres Id
+     */
+    public function actionLoadCompList($id){
+        
+        $objDc = Datacentres::model()->findByPk($id);
+        //$objXml = simplexml_load_file('all_comps_sql.xml');
+        if(!empty($objDc)){
+            $resXml = $this->curl_get_data($objDc->ip_address);
+            @$objXml = simplexml_load_string($resXml);
+            if(!empty($objXml)){
+                $this->renderPartial('_comp_list',array('objDc' => $objDc , 'objXml' =>$objXml ));    
+            }else{
+                //error
+            }
+        }else{
+            //error
+        }
+        
+       
+        
+    }//actionLoadCompList
+    
+    
+ /*--------- private  parts ---------------------- */
+ 
+    private $allCompAct = '/?action=last';
+    private $getCompAct = '/?action=single&ip=';
+    
+    private function curl_get_data($dc_id, $comp_ip = null){
+        
+        if(!empty($comp_ip)){
+            $url = 'http://'.$dc_id.$this->getCompAct.$comp_ip;
+        }else{
+            $url = 'http://'.$dc_id.$this->allCompAct;
+        }
+        
+          
+        $curl = curl_init(); //инициализация сеанса
+        curl_setopt($curl, CURLOPT_URL, $url); //урл сайта к которому обращаемся 
+        curl_setopt($curl, CURLOPT_HEADER,false); //выводим заголовки
+        curl_setopt($curl, CURLOPT_POST, true); //передача данных методом POST
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER,true); //теперь curl вернет нам ответ, а не выведет
+        
+            
+        
+        curl_setopt($curl, CURLOPT_USERAGENT, 'MSIE 5'); //эта строчка как-бы говорит: "я не скрипт, я IE5" :)
+                
+        $res = curl_exec($curl);
+        curl_close($curl);
+       
+        return $res;
+
+    }// curl_get_data   
+    
+    
+    
+    
+    
+    
+       
     
 }//end:class    

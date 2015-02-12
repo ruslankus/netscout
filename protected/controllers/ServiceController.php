@@ -47,10 +47,10 @@ class ServiceController extends Controller
     
     public function actionDataCentr(){
         $objUsr = Yii::app()->user;
-        
+        $lng = Yii::app()->language;
         $arrDc = ExtDatacentres::model()->get_users_dc($objUsr->id);
         //Debug::d($arrDc);
-        $this->render('data_centr',array('arrDc' => $arrDc));
+        $this->render('data_centr',array('arrDc' => $arrDc,'lng' => $lng));
     }
     
     /**
@@ -58,16 +58,13 @@ class ServiceController extends Controller
      * @param int $id - Data centre id 
      */
     public function actionCompList($id = null){
-        
-        //$xmlData = $this->curl_get_data()
-        
-        
+        //$xmlData = $this->curl_get_data()        
         //$objXml = simplexml_load_string($xmlData);
+        //$objXml = simplexml_load_file('all_comps_sql.xml');
         
-        $objXml = simplexml_load_file('all_comps_sql.xml');
-        
-        
-        $this->render('comp_list_old',array('objXml' => $objXml));
+        $objDc = Datacentres::model()->findByPk((int)$id);
+       
+        $this->render('comp_list',array('objDc' => $objDc ));
     }//actionCompList
     
     

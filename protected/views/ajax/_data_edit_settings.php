@@ -14,6 +14,6 @@
         'maxlength'=>3, 'placeholder' =>'XXX', 'value' => $arrIp[3])) ?>
     </div>
      <?php echo CHtml::error($form_model,'full_ip'); ?>
-	<div class="btn-holder"><a  data-new="0" data-dc="<?php echo $dc_id?>" class="button save-data">Save</a></div>
+	<div class="btn-holder"><a data-lng="<?php echo $lng?>"  data-new="0" data-dc="<?php echo $dc_id?>" class="button save-data">Save</a></div>
 <?php echo CHtml::endForm(); ?>     
 

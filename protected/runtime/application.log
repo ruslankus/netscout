@@ -2807,3 +2807,59 @@ Stack trace:
 REQUEST_URI=/js/charts-func-dinamic.js
 HTTP_REFERER=http://netscout.local/service/compinfo?ip=192.168.1.116
 ---
+2015/02/12 15:17:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "datacenter".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('datacenter')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('datacenter')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/datacen...')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/service/datacenter
+HTTP_REFERER=http://netscout.local/service/complist
+---
+2015/02/12 15:18:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "datacenr".' in C:\newOpenServer\domains\netscout.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(270): CController->missingAction('datacenr')
+#1 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('datacenr')
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/datacen...')
+#3 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/service/datacenr
+HTTP_REFERER=http://netscout.local/service/complist/6
+---
+2015/02/12 15:28:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/12 15:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/12 16:54:41 [error] [exception.CException] exception 'CException' with message 'Property "Datacentres.datacentres_name" is not defined.' in C:\newOpenServer\domains\netscout.local\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\db\ar\CActiveRecord.php(145): CComponent->__get('datacentres_nam...')
+#1 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(68): CActiveRecord->__get('datacentres_nam...')
+#2 [internal function]: ServiceController->actionCompList('8')
+#3 C:\newOpenServer\domains\netscout.local\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ServiceController), Array)
+#4 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ServiceController), Object(ReflectionMethod), Array)
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('complist')
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/complis...')
+#10 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/en/service/complist/8
+HTTP_REFERER=http://netscout.local/en/service/datacentr
+---

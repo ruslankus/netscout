@@ -10,6 +10,6 @@
         <?php echo CHtml::activeTextField($form_model,'ip4',array('class'=>'edit-ip','maxlength'=>3, 'placeholder' =>'XXX')) ?>
     </div>
      <?php echo CHtml::error($form_model,'full_ip'); ?>
-	<div class="btn-holder"><a  data-new="1 class="button save-data">Save</a></div>
+	<div class="btn-holder"><a data-lng="<?php echo $lng?>"  data-new="1" class="button save-data">Save</a></div>
 <?php echo CHtml::endForm(); ?>     
 

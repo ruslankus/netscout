@@ -6,7 +6,7 @@
     <div class="content-block-half left-alignment">
         <p>Netscout yra mūsų, inlusion Netforms komandos, kūrinys. Mes - jauni ir energingi, ta pačia linkme mąstantys profesionalai iš Pabaltijo.
          Tikime, kad technologijos ir dizainas gali išspręsti daug verslo problemų.
-          Bandydami pralenkti pažangą imamės pačių dižiausių iššūkių. </p>
+          Bandydami pralenkti pažangą imamės pačių didžiausių iššūkių. </p>
         <p>Matydami spragą IT sektoriuje sukūrėme Netscout - atsaką į deficitą rinkoje.
          Manome, kad daugelis IT įmonių nedrįsta arba nežino kaip vykdyti į savo vartotoją orientuotos politikos.
           Nesvarbu, kokio dydžio jūsų verslas, patogus technologijų naudojimas yra vienas svarbiausių sėkmės elementų.

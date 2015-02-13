@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2015-02-12 19:14:10
+Date: 2015-02-13 17:30:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,8 +32,6 @@ CREATE TABLE `customers` (
 -- ----------------------------
 -- Records of customers
 -- ----------------------------
-INSERT INTO `customers` VALUES ('5', 'Test', 'Vasia', 'Pupkin', '$1$WT4.nR2.$CHdd7aZsUz/.QA9TQYSfK.', '4321-4321-4321');
-INSERT INTO `customers` VALUES ('6', 'vasia', 'Dima ', 'Hitrov', '$1$Cq2.ja5.$unlIAvy34YnBnXjymTBqe1', '4444-4444-4444');
 
 -- ----------------------------
 -- Table structure for `datacentres`
@@ -44,18 +42,11 @@ CREATE TABLE `datacentres` (
   `datacenter_name` varchar(30) DEFAULT NULL,
   `ip_address` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of datacentres
 -- ----------------------------
-INSERT INTO `datacentres` VALUES ('1', null, '212.65.42.34');
-INSERT INTO `datacentres` VALUES ('2', 'DC', '12333333');
-INSERT INTO `datacentres` VALUES ('3', 'rtrtrtr', '343434');
-INSERT INTO `datacentres` VALUES ('4', 'dc1', '213.23.23.34');
-INSERT INTO `datacentres` VALUES ('6', 'fgdgd', '23.255.34.34');
-INSERT INTO `datacentres` VALUES ('7', 'test2', '192.168.1.135');
-INSERT INTO `datacentres` VALUES ('8', 'dc id', '34.43.34.34');
 
 -- ----------------------------
 -- Table structure for `dc_user`
@@ -68,14 +59,11 @@ CREATE TABLE `dc_user` (
   PRIMARY KEY (`id`),
   KEY `dc_user_ibfk_1` (`dc_id`),
   CONSTRAINT `dc_user_ibfk_1` FOREIGN KEY (`dc_id`) REFERENCES `datacentres` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dc_user
 -- ----------------------------
-INSERT INTO `dc_user` VALUES ('3', '6', '5');
-INSERT INTO `dc_user` VALUES ('4', '7', '5');
-INSERT INTO `dc_user` VALUES ('5', '8', '5');
 
 -- ----------------------------
 -- Table structure for `labels`
@@ -85,7 +73,7 @@ CREATE TABLE `labels` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `label` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of labels
@@ -97,6 +85,11 @@ INSERT INTO `labels` VALUES ('4', 'about_us');
 INSERT INTO `labels` VALUES ('5', 'about_product');
 INSERT INTO `labels` VALUES ('6', 'contacts');
 INSERT INTO `labels` VALUES ('7', 'account');
+INSERT INTO `labels` VALUES ('8', 'your_account');
+INSERT INTO `labels` VALUES ('9', 'data_center');
+INSERT INTO `labels` VALUES ('10', 'download');
+INSERT INTO `labels` VALUES ('11', 'add');
+INSERT INTO `labels` VALUES ('12', 'download_licence');
 
 -- ----------------------------
 -- Table structure for `labels_trl`
@@ -108,7 +101,7 @@ CREATE TABLE `labels_trl` (
   `language_id` int(11) NOT NULL,
   `value` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of labels_trl
@@ -127,6 +120,16 @@ INSERT INTO `labels_trl` VALUES ('11', '6', '1', 'Contacts');
 INSERT INTO `labels_trl` VALUES ('12', '6', '2', 'Kontaktai');
 INSERT INTO `labels_trl` VALUES ('13', '7', '1', 'Account');
 INSERT INTO `labels_trl` VALUES ('14', '7', '2', 'Prisijungimas');
+INSERT INTO `labels_trl` VALUES ('15', '8', '1', 'Your account');
+INSERT INTO `labels_trl` VALUES ('16', '8', '2', 'Jūsų paskyra');
+INSERT INTO `labels_trl` VALUES ('17', '9', '1', 'Data centres');
+INSERT INTO `labels_trl` VALUES ('18', '9', '2', 'Duomenų centras');
+INSERT INTO `labels_trl` VALUES ('19', '10', '1', 'Download');
+INSERT INTO `labels_trl` VALUES ('20', '10', '2', 'Parsisiųsti');
+INSERT INTO `labels_trl` VALUES ('21', '11', '1', 'Add');
+INSERT INTO `labels_trl` VALUES ('22', '11', '2', 'Pridėti');
+INSERT INTO `labels_trl` VALUES ('23', '12', '1', 'Download licence');
+INSERT INTO `labels_trl` VALUES ('24', '12', '2', 'Parsisiųskite licenziją');
 
 -- ----------------------------
 -- Table structure for `languages`
@@ -699,6 +702,3 @@ CREATE TABLE `user_licence` (
 -- ----------------------------
 -- Records of user_licence
 -- ----------------------------
-INSERT INTO `user_licence` VALUES ('11', '5', '454', '1423568967');
-INSERT INTO `user_licence` VALUES ('12', '5', '452', '1423568996');
-INSERT INTO `user_licence` VALUES ('13', '5', '4', '1423572982');

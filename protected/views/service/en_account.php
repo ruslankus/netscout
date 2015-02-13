@@ -10,14 +10,33 @@
 		
 		<h2>Download last version</h2>
         <p class="in-login-p">Here you can download the latest version of the Netscout Monitoring Tool. Start monitoring your servers after downloading the application and verification key. </p>
-		<a class="button download-button buttons-backgrounds" href="/service/download" >Download</a>
+		
+        <div class="download-holder clearfix">
+        	<table width="100%">
+            <tr>
+                <td>Nestcout 32 bit version</td>
+                <td><a class="button download-button buttons-backgrounds" href="/service/download?id=1" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
+                <td>Nestcout pdf </td>
+                <td><a class="button download-button buttons-backgrounds" href="#" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
+            </tr>
+            <tr>
+                <td>Nestcout 64 bit version</td>
+                <td><a class="button download-button buttons-backgrounds" href="/service/download?id=2" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
+                <td><td>
+                <td></td>
+            </tr>
+            </table>
+        </div><!--/download-holder--> 
+        
+        
 		<div class="hr"></div>
-		<div id="add-new-key">
+        
+		<div id="add-new-key" class="clearfix">
 			<h2>Add new key</h2>
 			 <?php $form=$this->beginWidget('CActiveForm', array('enableAjaxValidation'=>false)); ?>
                 <?php echo $form->textField($form_model,'newkey',array('id' => 'add-new-key-input-field', 'placeholder' =>'12 simbols XXXX-XXXX-XXXX'));?>    
 				
-				<input type="submit" class="button buttons-backgrounds" id="add-new-key-submit" value="Add">
+				<input type="submit" class="button buttons-backgrounds" id="add-new-key-submit" value="<?php echo Trl::t()->getLabel('add');?>" />
                 <?php echo $form->error($form_model,'newkey'); ?>
 			<?php $this->endWidget();?>
 		</div>

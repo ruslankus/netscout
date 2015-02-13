@@ -21,17 +21,17 @@
 #add-new-key {
 	margin-bottom:15px;
 	width: 100%;
-	display: table;
-	vertical-align: middle
 }
 
-#add-new-key h2 {
-	display: table-cell
-}
+#add-new-key > * {
+	width:50%;}
+
+#add-new-key > h2 {
+	float:left;}
+
 
 #add-new-key form {
-	display: table-cell;
-	vertical-align: middle
+	float:right;
 }
 
 #add-new-key form input {
@@ -118,3 +118,12 @@
 	color: #6f5787;
 	padding: 0 5%;
 }
+
+/*------- Ruslan code -----*/
+.download-holder > * {
+	height:70px;
+	margin-right:20px;
+	float:left;}
+	
+.download-holder > div:first-child {
+	width:300px;

@@ -40,7 +40,7 @@ class DataCentrForm extends CFormModel
         
         $arrVal = $this->common_fields();
         foreach($arrVal as $item){
-            if(empty($item)){
+            if(empty($item) && $item !=='0' ){
                 $this->addError('full_ip','Ip can\'t be blank');
                 return false;
             }elseif(!is_numeric($item)){    

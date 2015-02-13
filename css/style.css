@@ -17,6 +17,10 @@
     padding: 0;
 }
 
+
+body {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif }
+
 .header
 {
     width: 100%;
@@ -179,7 +183,6 @@
 
 .main-wrapper
 {
-    display: block;
     width: 940px;
     min-height: 566px;
     margin: 0 auto;
@@ -187,8 +190,6 @@
 
 .main-wrapper .block-header
 {
-    display: block;
-    width: 100%;
     height: 94px;
     line-height: 94px;
 }
@@ -321,11 +322,14 @@ h2
 
 .main-wrapper .hr
 {
-    width: 100%;
     background-color: #d6c9e4;
     height: 1px;
     margin-bottom: 15px;
 }
+
+.main-wrapper hr.hr {
+	border:none;
+	height:1px;}
 
 /********************************************************************************************************************/
 
@@ -515,6 +519,10 @@ h3
     background: linear-gradient(to bottom, #e4ddf1 0%,#ffffff 47%,#ddd8e9 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4ddf1', endColorstr='#ddd8e9',GradientType=0 ); /* IE6-9 */
 }
+
+.lt_btn.button {
+	width:140px;}
+
 
 .button:hover
 {

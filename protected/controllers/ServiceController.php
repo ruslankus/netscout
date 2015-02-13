@@ -24,6 +24,7 @@ class ServiceController extends Controller
     {
         $objUsr = Yii::app()->user;
         $form_model = new AddKeyForm();
+        $lng = Yii::app()->language;
         
         if($_POST['AddKeyForm'])
         {
@@ -41,7 +42,7 @@ class ServiceController extends Controller
         
         $arrUsrData = ExtUserLicence::model()->get_user_license_info($objUsr->id);
             
-        $this->render('account', array('arrUsrData' => $arrUsrData,'form_model' => $form_model));
+        $this->render($lng . '_account', array('arrUsrData' => $arrUsrData,'form_model' => $form_model));
     }
     
     
@@ -208,11 +209,25 @@ class ServiceController extends Controller
     }
     
     
-    
-    public function actionDownload(){
-        $filename = 'netscout.rar';
-        header('Content-type: application/txt');//тут тип
-        header('Content-Disposition: attachment; filename='.$filename);
+    /**
+     * @param $id - int File type ID (32bit or 64bit ))
+     */
+    public function actionDownload($id){
+        
+        if($id == 1){
+            $filename = 'download/netscoutsetup_x86.exe';    
+        }else{
+            $filename = 'download/netscoutsetup_x64.exe';   
+        }
+        
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename='.basename($filename));
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length:' . filesize($filename));
+        ob_clean();
+        flush();
         readfile($filename);
         Yii::app()->end();
     }

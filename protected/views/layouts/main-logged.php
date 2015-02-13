@@ -34,7 +34,7 @@
 <div class="under-footer">
     <div class="central-block">
         <p>Suspendisse viverra, nunc in viverra vestibulum, urna tellus accumsan velit, eget faucibus ante libero et dolor. Nulla facilisi. Suspendisse tempor ultrices sem, sed aliquam sem tempor rutrum. Proin vel metus dolor. Aenean hendrerit neque ac mattis commodo. Vivamus id lacus elit. Maecenas massa justo, scelerisque quis facilisis et, malesuada a diam. Pellentesque at pulvinar sapien. Nam tincidunt ultrices lacus eu malesuada. Curabitur vel hendrerit leo. Morbi luctus nibh ligula, nec porta mi luctus ut. Integer sagittis justo at sollicitudin dictum. Aliquam blandit erat est, eget faucibus enim mattis nec.</p>
-        <span class="copyright">© 2014 Lookout, Inc.  Lookout and the Shield Logo are registered trademarks</span>
+         <?php $this->widget('application.widgets.FootCopy');?>
     </div>
 </div>
 

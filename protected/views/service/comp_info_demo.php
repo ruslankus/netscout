@@ -15,7 +15,7 @@
 
 		<h2>Mega server</h2>
 		<div id="links">
-			<a class="button buttons-backgrounds" href="/service/complist" >Go Back</a>
+			<a class="button buttons-backgrounds" href="/service/datacentr" >Go Back</a>
 			<a class="button buttons-backgrounds" href="#" >Refresh</a>
 		</div>
         

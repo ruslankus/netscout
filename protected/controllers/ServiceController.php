@@ -142,7 +142,7 @@ class ServiceController extends Controller
 		    }	
 	    
 		}    
-		$this->render($lng . '_login', array('form_model' => $form_model));
+		$this->render($lng . '_login', array('form_model' => $form_model,'lng' => $lng));
 	}//end login
     
     
@@ -198,6 +198,10 @@ class ServiceController extends Controller
 		
 		$this->render('register',array('form_model' => $form_model));
 	}//end Register
+    
+    
+    
+    
      
     /**
      * Does logout and redirects

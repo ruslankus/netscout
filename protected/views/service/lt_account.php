@@ -14,13 +14,13 @@
 		<div class="download-holder clearfix">
         	<table width="100%">
             <tr>
-                <td>Nestcout 32 bit version</td>
+                <td>Netscout 32 bit version</td>
                 <td><a class="button download-button buttons-backgrounds" href="/service/download?id=1" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
-                <td>Nestcout pdf </td>
+                <td>Netscout pdf </td>
                 <td><a class="button download-button buttons-backgrounds" href="#" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
             </tr>
             <tr>
-                <td>Nestcout 64 bit version</td>
+                <td>Netscout 64 bit version</td>
                 <td><a class="button download-button buttons-backgrounds" href="/service/download?id=2" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
                 <td><td>
                 <td></td>

@@ -29,7 +29,7 @@
             <div class="one-row-long">
                 <input type="submit" class="button" value="Login">
                 <a class="button" href="/service/register">Registration</a>
-                <a class="pass-forgot" href="/account/restore">I forgot my password</a>
+                <a class="pass-forgot" href="/<?php echo $lng?>/account">I forgot my password</a>
             </div>
         <?php $this->endWidget(); ?>
     </div>

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2015-02-13 17:30:33
+Date: 2015-02-17 19:19:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -21,17 +21,22 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `customers`;
 CREATE TABLE `customers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `login` longtext,
-  `f_name` longtext,
-  `l_name` longtext,
-  `password` longtext,
-  `full_key` longtext,
+  `login` varchar(30) DEFAULT NULL,
+  `f_name` varchar(30) DEFAULT NULL,
+  `l_name` varchar(30) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `full_key` varchar(20) DEFAULT NULL,
+  `email` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of customers
 -- ----------------------------
+INSERT INTO `customers` VALUES ('1', 'admin', 'Ruslan', 'Kiricenko', '$1$E40.7e3.$7.wKqNIalV9o4j9Y0ZaHZ0', 'YAW4-KISJ-QP7S', 'ruslankus@yahoo.com');
+INSERT INTO `customers` VALUES ('2', 'viqtor', 'Viqtor', 'Creed', '$1$GXzAAmaN$qmFwuvaYgKjt13loJQFpm0', '6R3L-2SXH-33ZB', 'viq@test.lt');
+INSERT INTO `customers` VALUES ('3', 'user', 'User', 'Demo', '$1$IOg3jSyO$/6DmP19eLufqWYJjeHUVx/', 'YAW4-KISJ-QP7S', 'demo@demo.lt');
+INSERT INTO `customers` VALUES ('4', 'pb', 'Pablo', 'Escobar', '$1$anutrUbh$vcflSmPi.HgpBHlXCcZhh0', '1HW7-K1BR-895L', 'pd@tr.com');
 
 -- ----------------------------
 -- Table structure for `datacentres`
@@ -42,11 +47,15 @@ CREATE TABLE `datacentres` (
   `datacenter_name` varchar(30) DEFAULT NULL,
   `ip_address` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of datacentres
 -- ----------------------------
+INSERT INTO `datacentres` VALUES ('9', 'Test Dc', '88.119.151.3');
+INSERT INTO `datacentres` VALUES ('10', 'Demo Dc', '88.119.151.3');
+INSERT INTO `datacentres` VALUES ('11', 'Test', '88.119.151.3');
+INSERT INTO `datacentres` VALUES ('12', 'b', '212.111.111.111');
 
 -- ----------------------------
 -- Table structure for `dc_user`
@@ -59,11 +68,15 @@ CREATE TABLE `dc_user` (
   PRIMARY KEY (`id`),
   KEY `dc_user_ibfk_1` (`dc_id`),
   CONSTRAINT `dc_user_ibfk_1` FOREIGN KEY (`dc_id`) REFERENCES `datacentres` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dc_user
 -- ----------------------------
+INSERT INTO `dc_user` VALUES ('6', '9', '1');
+INSERT INTO `dc_user` VALUES ('7', '10', '3');
+INSERT INTO `dc_user` VALUES ('8', '11', '2');
+INSERT INTO `dc_user` VALUES ('9', '12', '4');
 
 -- ----------------------------
 -- Table structure for `labels`
@@ -73,7 +86,7 @@ CREATE TABLE `labels` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `label` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of labels
@@ -90,6 +103,7 @@ INSERT INTO `labels` VALUES ('9', 'data_center');
 INSERT INTO `labels` VALUES ('10', 'download');
 INSERT INTO `labels` VALUES ('11', 'add');
 INSERT INTO `labels` VALUES ('12', 'download_licence');
+INSERT INTO `labels` VALUES ('13', 'faq');
 
 -- ----------------------------
 -- Table structure for `labels_trl`
@@ -101,7 +115,7 @@ CREATE TABLE `labels_trl` (
   `language_id` int(11) NOT NULL,
   `value` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of labels_trl
@@ -130,6 +144,8 @@ INSERT INTO `labels_trl` VALUES ('21', '11', '1', 'Add');
 INSERT INTO `labels_trl` VALUES ('22', '11', '2', 'Pridėti');
 INSERT INTO `labels_trl` VALUES ('23', '12', '1', 'Download licence');
 INSERT INTO `labels_trl` VALUES ('24', '12', '2', 'Parsisiųskite licenziją');
+INSERT INTO `labels_trl` VALUES ('25', '13', '1', 'FAQ');
+INSERT INTO `labels_trl` VALUES ('26', '13', '2', 'DUK');
 
 -- ----------------------------
 -- Table structure for `languages`
@@ -184,7 +200,7 @@ CREATE TABLE `menu` (
   `label` longtext,
   `route` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of menu
@@ -194,6 +210,7 @@ INSERT INTO `menu` VALUES ('2', 'about_us', null);
 INSERT INTO `menu` VALUES ('3', 'about_product', null);
 INSERT INTO `menu` VALUES ('4', 'contacts', null);
 INSERT INTO `menu` VALUES ('5', 'account', 'service');
+INSERT INTO `menu` VALUES ('6', 'faq', null);
 
 -- ----------------------------
 -- Table structure for `numbers`
@@ -676,7 +693,7 @@ CREATE TABLE `pages` (
   `content` longtext,
   `template` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of pages
@@ -686,6 +703,7 @@ INSERT INTO `pages` VALUES ('2', '2', null, 'about_us');
 INSERT INTO `pages` VALUES ('3', '3', null, 'about_product');
 INSERT INTO `pages` VALUES ('4', '4', null, 'contacts');
 INSERT INTO `pages` VALUES ('5', '5', null, 'account');
+INSERT INTO `pages` VALUES ('6', '6', null, 'faq');
 
 -- ----------------------------
 -- Table structure for `user_licence`
@@ -697,8 +715,12 @@ CREATE TABLE `user_licence` (
   `lic_id` int(11) NOT NULL,
   `activation_date` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_licence
 -- ----------------------------
+INSERT INTO `user_licence` VALUES ('1', '1', '460', null);
+INSERT INTO `user_licence` VALUES ('2', '2', '459', null);
+INSERT INTO `user_licence` VALUES ('3', '3', '460', null);
+INSERT INTO `user_licence` VALUES ('4', '4', '456', null);

@@ -184,7 +184,7 @@ body {
 .main-wrapper
 {
     width: 940px;
-    min-height: 566px;
+    min-height: 660px;
     margin: 0 auto;
 }
 
@@ -285,14 +285,12 @@ h2
 
 .under-footer
 {
-    height: 180px;
     background-color: #281d34;
 }
 
 .under-footer .central-block
 {
     width: 940px;
-    height: 180px;
     margin: 0 auto;
 }
 

@@ -12,7 +12,7 @@
                 <h2>Nuotolinė stebėsena</h2>
                 <p>Stebėkite savo serverio būklę per atstumą: atminties apimtį, temperatūrą, kietojo disko dalių apkrovą ir kitą jums svarbią informaciją.
                  Mūsų debesų kompiuterijos sprendimas leis jums pasiekti duomenų sistemas per nuotolinę IP prieigą, nebūtina vykti į biurą.</p>
-                <a href="#" class="button">Plačiau</a>
+                <a href="/<?php echo $lng; ?>/page/index/3" class="button">Plačiau</a>
             </div>
 
             <div class="block-description">
@@ -20,7 +20,7 @@
                 <p>Netscout serverių stebėsenos įrankis visų vartotojų informaciją paverčia išsamiomis diagramomis ir pateikia vienoje vietoje.
                  Sistemos administratoriai gauna prieigą prie Netscout prietaisų skydelio, kuriame gali matyti chronologines ir duomenų apkrovimo diagramas.
                   Naudodamiesi mūsų vizualizuotomis diagramomis sužinokite, kurie duomenų sistemos elementai yra svarbiausi.</p>
-                <a href="#" class="button">Learn more</a>
+                <a href="/<?php echo $lng; ?>/page/index/3"  class="button">Plačiau</a>
             </div>
 
             <div class="block-description">
@@ -29,7 +29,7 @@
                  Lengva pastebėti, kurie serveriai per daug apkrauti ir gali nustoti veikti.
                   Taip galite užkirsti kelią vartotojų skundams - išspręsti problemą prieš išgirstant skambant telefoną.
                    Klientų aptarnavimas tampa vaikų žaidimu su Netscout stebėsenos įrankiu.</p>
-                <a href="#" class="button">Plačiau</a>
+                <a href="/<?php echo $lng; ?>/page/index/3"  class="button">Plačiau</a>
             </div>
         </div>
     </div>

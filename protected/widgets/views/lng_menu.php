@@ -1,5 +1,5 @@
 
- <div class="lang-hlder">Lang:
+ <div class="lang-hlder">
  <?php $string = ''; foreach($objLngs as $lng):?>
      <?php
       $params['language'] = $lng->lng_prefix;

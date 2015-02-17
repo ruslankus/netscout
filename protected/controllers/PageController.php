@@ -14,7 +14,7 @@ class PageController extends Controller
         $objPage = Pages::model()->findByAttributes(array('menu_id' => $id));
         $template = (!empty($objPage->template))? $prefx . $objPage->template : $prefx . $this->_defoult_teplate;
         
-        $this->render($template);
+        $this->render($template,array('lng' => $current_lng));
     }
     
     

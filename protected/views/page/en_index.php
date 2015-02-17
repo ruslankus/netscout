@@ -13,7 +13,7 @@
                 <h2>Remote Monitoring </h2>
                 <p>At a distance see information about your users server health including: memory, heating, disk partition and other vital information. 
                 Our cloud-based solution provides access to entire data systems through remote IP access when you are not in the office</p>
-                <a href="#" class="button">Learn more</a>
+                <a href="/<?php echo $lng; ?>/page/index/3"  class="button">Learn more</a>
             </div>
 
             <div class="block-description">
@@ -21,7 +21,7 @@
                 <p>Netscout Monitoring Tool provides informative visuals across all users connected to your network.
                  System administrators are given access to Netscout’s dashboard that includes chronology and data-use graphs.
                  Understand which elements in your data system are most effective with Netscout’s data visualization.</p>
-                <a href="#" class="button">Learn more</a>
+                <a href="/<?php echo $lng; ?>/page/index/3"  class="button">Learn more</a>
             </div>
 
             <div class="block-description">
@@ -29,7 +29,7 @@
                 <p>Our server-monitoring tool makes managing CPU usage convenient. You can easily understand which servers are being over-used and for what reason.
                  This allows you to neutralize the problem before your users even realize it.
                   Customer service is made simple with the Netscout Monitoring Tool</p>
-                <a href="#" class="button">Learn more</a>
+                <a href="/<?php echo $lng; ?>/page/index/3"  class="button">Learn more</a>
             </div>
         </div>
     </div>

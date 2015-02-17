@@ -22,7 +22,7 @@
     
       <?php $this->endWidget(); ?>          
     </div><!--/data-room-report --> 
-    <?echo CHtml::error($form_model,'email');?>
+    <?php echo CHtml::error($form_model,'email');?>
     
     
     

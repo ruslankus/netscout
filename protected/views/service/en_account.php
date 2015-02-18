@@ -14,16 +14,16 @@
         <div class="download-holder clearfix">
         	<table width="100%">
             <tr>
-                <td>Netscout 32 bit version</td>
+                <td>NetScout Service Manager 32 bit version</td>
                 <td><a class="button download-button buttons-backgrounds" href="/service/download?id=1" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
-                <td>Netscout pdf </td>
-                <td><a class="button download-button buttons-backgrounds" href="#" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
+                <td>NetScout Service Manager 64 bit version </td>
+                <td><a class="button download-button buttons-backgrounds" href="/service/download?id=2" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
             </tr>
             <tr>
-                <td>Netscout 64 bit version</td>
-                <td><a class="button download-button buttons-backgrounds" href="/service/download?id=2" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
-                <td><td>
-                <td></td>
+                <td>NetScout Monitor 32,64 version</td>
+                <td><a class="button download-button buttons-backgrounds" href="/service/download?id=3" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
+                <td>Nestcout.pdf </td>
+                <td><a class="button download-button buttons-backgrounds" href="/service/download?id=4" ><?php echo Trl::t()->getLabel('download'); ?></a></td>
             </tr>
             </table>
         </div><!--/download-holder--> 

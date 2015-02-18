@@ -17,8 +17,12 @@
     padding: 0;
 }
 
+html {
+	height:100%;}
+
 
 body {
+	height:100%;
 	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif }
 
 .header
@@ -520,6 +524,9 @@ h3
 
 .lt_btn.button {
 	width:140px;}
+	
+.change-password.button {
+	width:140px;}	
 
 
 .button:hover

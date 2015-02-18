@@ -219,9 +219,17 @@ class ServiceController extends Controller
     public function actionDownload($id){
         
         if($id == 1){
-            $filename = 'download/netscoutsetup_x86.exe';    
+            $filename = 'download/netscoutsetup_monitor_x86.exe';    
+        }elseif($id == 2){
+            $filename = 'download/netscoutsetupt_monitor_x64.exe';   
+        }elseif($id == 3){
+            $filename = 'download/netscoutsetup_service.exe'; 
+        }elseif($id == 4){
+            $filename = 'download/guide.pdf';
+       
         }else{
-            $filename = 'download/netscoutsetup_x64.exe';   
+            //return false;
+            Yii::app()->end();
         }
         
         header('Content-Description: File Transfer');

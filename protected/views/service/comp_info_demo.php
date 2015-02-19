@@ -4,7 +4,7 @@
     $cs->registerCssFile(Yii::app()->request->baseUrl.'/js/charts/c3.css');
     $cs->registerScriptFile(Yii::app()->baseUrl.'/js/charts/c3.js',CClientScript::POS_END);
     $cs->registerScriptFile(Yii::app()->baseUrl.'/js/charts/d3.js',CClientScript::POS_END);
-    $cs->registerScriptFile(Yii::app()->baseUrl.'/js/charts-func-dinamic.js',CClientScript::POS_END);
+    $cs->registerScriptFile(Yii::app()->baseUrl.'/js/charts-func-static.js',CClientScript::POS_END);
 ?>
 <div class="separator-gradient"></div>
 <div class="main-wrapper">
@@ -54,26 +54,31 @@
     <div class="hr"></div>
     <div id="chart_box">
         <h2>Server Status</h2>
-		<div class="chart cpu">
-			<div class="chart-title">
-				<h3>Processor usage: 34%</h3>
-			</div>
-			<div id="chart_cpu"></div>
-		</div><!--/chart cpu -->
-        
-		<div class="chart memory">
-			<div class="chart-title">
-				<h3>Memory usage: 51%</h3>
-			</div>
-			<div id="chart_memory"></div>
-		</div><!--/ chart memory -->
-
-        <div class="chart cpu">
-            <div class="chart-title">
-                <h3>Temperature: 45C</h3>
-            </div>
-            <div id="chart_temp"></div>
-        </div><!--/ chart memory -->
+        <div class="message">
+            <p>Please press refressh to get data</p>
+        </div>
+        <div id="charts-holder" class="hidden">
+    		<div class="chart cpu ">
+    			<div class="chart-title">
+    				<h3>Processor usage: <span>34%</span></h3>
+    			</div>
+    			<div id="chart_cpu"></div>
+    		</div><!--/chart cpu -->
+            
+    		<div class="chart memory">
+    			<div class="chart-title">
+    				<h3>Memory usage: <span>51%</span></h3>
+    			</div>
+    			<div id="chart_memory"></div>
+    		</div><!--/ chart memory -->
+    
+            <div class="chart cpu">
+                <div class="chart-title">
+                    <h3>Temperature: <span>45C</span></h3>
+                </div>
+                <div id="chart_temp"></div>
+            </div><!--/ chart memory -->
+        </div><!--/ charts-holder -->
         
 	</div><!-- /data-server-report -->
 	

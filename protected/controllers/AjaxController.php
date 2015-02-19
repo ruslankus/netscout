@@ -115,10 +115,49 @@ class AjaxController extends Controller
         }else{
             //error
         }
-        
-       
-        
+  
     }//actionLoadCompList
+    
+    
+    public function actionGetCompInfo(){
+        $request = Yii::app()->request;
+        if($request->isAjaxRequest){
+            
+            $arrMemory = array('Memory usage');
+            $arrCpu = array('CPU usage');
+            $arrTemp = array('Temp C');
+            
+            $dcId = $request->getPost('dc');
+            $ip = $request->getPost('ip');
+            $objDc = Datacentres::model()->findByPk($dcId);
+            if(!empty($objDc)){
+                $resXml = $this->curl_get_data($objDc->ip_address,$ip);
+                @$objXml = simplexml_load_string($resXml);
+                //Debug::d($objXml->dynamic);
+                if($objXml){
+                    
+                    foreach($objXml->dynamic->item as $item){
+                      //Debug::d($item);
+                        $arrMemory[] = (int)$item->memusedp;
+                        $arrCpu[] = (int)$item->cpu; 
+                        $arrTemp[] = (int)$item->cputempcelsius; 
+                    }
+                    
+                    $arrJson['memory'] = $arrMemory;
+                    $arrJson['cpu'] = $arrCpu;
+                    $arrJson['temp'] = $arrTemp;
+                    
+                    echo json_encode($arrJson);
+                    //Debug::d($arrJson);
+                    Yii::app()->end();
+                }//end if($objXml)
+                
+            }
+            
+        }else{
+            //exception
+        }
+    }
     
     
  /*--------- private  parts ---------------------- */
@@ -126,12 +165,12 @@ class AjaxController extends Controller
     private $allCompAct = '/?action=last';
     private $getCompAct = '/?action=single&ip=';
     
-    private function curl_get_data($dc_id, $comp_ip = null){
+    private function curl_get_data($dc_ip, $comp_ip = null){
         
         if(!empty($comp_ip)){
-            $url = 'http://'.$dc_id.$this->getCompAct.$comp_ip;
+            $url = 'http://'.$dc_ip.$this->getCompAct.$comp_ip;
         }else{
-            $url = 'http://'.$dc_id.$this->allCompAct;
+            $url = 'http://'.$dc_ip.$this->allCompAct;
         }
         
           

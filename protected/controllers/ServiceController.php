@@ -114,11 +114,26 @@ class ServiceController extends Controller
     }//actionCompList
     
     
-    public function actionCompInfo($ip = nul){
-        //$xmlData = $this->curl_get_data($ip);
-        //$objXml = simplexml_load_string($xmlData);  
+    public function actionCompInfo(){
         
-        $this->render('comp_info_demo');        
+        $request = Yii::app()->request;
+        $dcId = $request->getParam('dc');
+        $ip = $request->getParam('ip');
+        $opSys = $request->getParam('ops');
+        
+        $objDc = Datacentres::model()->findByPk((int)$dcId);
+        if(!empty($objDc)){
+            
+            //$xmlData = $this->curl_get_data($ip);
+            //$objXml = simplexml_load_string($xmlData);  
+        
+            
+            $this->render('comp_info', array('objDc' => $objDc, 'opSys' => $opSys, 'ip' => $ip));        
+        }else{
+            //error
+        } 
+        
+           
     }
      
      

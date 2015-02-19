@@ -1,6 +1,7 @@
 			var cpu_data = ['CPU usage', 30, 70, 90, 95, 75, 40];
 			var memory_data = ['Memory usage', 95, 10, 90, 20, 35, 40];	                  
 			time_x = ['x', 0, 10, 20, 30, 40, 50];
+            // cpu chart
 			var chart_cpu = c3.generate({
 				bindto: '#chart_cpu',
 				padding: {
@@ -37,7 +38,7 @@
 				  pattern: ['#9e71db']
 				}	
 			});
-
+            // cpu memory
 			var chart_memory = c3.generate({
 				bindto: '#chart_memory',
 				padding: {
@@ -75,6 +76,7 @@
 				}
 			});
 			
+            //cpu temp
 			var chart = c3.generate({
 				bindto: '#chart_temp',
 				padding: {
@@ -118,6 +120,7 @@
 
 
 //moreSnow();
+/*
 function refreshCarts()
 {
     chart_cpu.load({
@@ -138,9 +141,11 @@ function refreshCarts()
     })
     chartCicle();
 }
+*/
 
 
 //chartCicle();
+
 
 function chartCicle() {
 setTimeout("refreshCarts()", 2000);

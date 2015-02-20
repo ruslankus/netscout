@@ -103,14 +103,14 @@ class AjaxController extends Controller
      * @param int $id - Data centres Id
      */
     public function actionLoadCompList($id){
-        
+        $lng = Yii::app()->language;
         $objDc = Datacentres::model()->findByPk($id);
         //$objXml = simplexml_load_file('all_comps_sql.xml');
         if(!empty($objDc)){
             $resXml = $this->curl_get_data($objDc->ip_address);
             @$objXml = simplexml_load_string($resXml);
             
-            $this->renderPartial('_comp_list',array('objDc' => $objDc , 'objXml' =>$objXml ));   
+            $this->renderPartial('_comp_list',array('objDc' => $objDc , 'objXml' =>$objXml, 'lng' => $lng ));   
            
         }else{
             //error
@@ -120,12 +120,14 @@ class AjaxController extends Controller
     
     
     public function actionGetCompInfo(){
+        $lng = Yii::app()->language;
         $request = Yii::app()->request;
         if($request->isAjaxRequest){
             
             $arrMemory = array('Memory usage');
             $arrCpu = array('CPU usage');
             $arrTemp = array('Temp C');
+            $arrSpace = array('Space Free Gb');
             
             $dcId = $request->getPost('dc');
             $ip = $request->getPost('ip');
@@ -140,12 +142,21 @@ class AjaxController extends Controller
                       //Debug::d($item);
                         $arrMemory[] = (int)$item->memusedp;
                         $arrCpu[] = (int)$item->cpu; 
-                        $arrTemp[] = (int)$item->cputempcelsius; 
+                        $arrTemp[] = (int)$item->cputempcelsius;
+                        $arrSpace[] = ((int)$item->spacefree)/1000;
                     }
                     
+                    
+                    $arrJson['space_total'] = ((int)$objXml->dynamic->item[0]->spacetotal)/ 1000;
                     $arrJson['memory'] = $arrMemory;
+                    $arrJson['average_mem'] = $this->_array_average($arrJson['memory']);
                     $arrJson['cpu'] = $arrCpu;
+                    $arrJson['average_cpu'] = $this->_array_average($arrJson['cpu']);
                     $arrJson['temp'] = $arrTemp;
+                    $arrJson['average_temp'] = $this->_array_average($arrJson['temp']);
+                    $arrJson['space_free'] = $arrSpace;
+                    $arrJson['average_space'] = $this->_array_average($arrJson['space_free']);
+                    
                     
                     echo json_encode($arrJson);
                     //Debug::d($arrJson);
@@ -161,6 +172,11 @@ class AjaxController extends Controller
     
     
  /*--------- private  parts ---------------------- */
+     
+    private function _array_average($array) {
+        return (int)(array_sum($array) / count($array));
+    }//everage  
+    
  
     private $allCompAct = '/?action=last';
     private $getCompAct = '/?action=single&ip=';

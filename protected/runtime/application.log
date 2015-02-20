@@ -4389,3 +4389,108 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2015/02/20 13:48:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/20 14:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/20 14:14:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/20 14:14:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/02/20 15:40:06 [error] [exception.CException] exception 'CException' with message 'UrlManager ir jo elgsenos neturi metodo ar uždarinio „defaultUrl“.' in C:\newOpenServer\domains\netscout.local\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\protected\components\UrlManager.php(14): CComponent->__call('defaultUrl', Array)
+#1 C:\newOpenServer\domains\netscout.local\protected\components\UrlManager.php(14): CUrlManager->defaultUrl('/service/compin...', Array, '&')
+#2 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(551): UrlManager->createUrl('/service/compin...', Array, '&')
+#3 C:\newOpenServer\domains\netscout.local\protected\widgets\views\lng_menu.php(9): CApplication->createUrl('/service/compin...', Array)
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(130): require('C:\\newOpenServe...')
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\newOpenServe...', Array, false)
+#6 C:\newOpenServer\domains\netscout.local\framework\web\widgets\CWidget.php(244): CBaseController->renderFile('C:\\newOpenServe...', Array, false)
+#7 C:\newOpenServer\domains\netscout.local\protected\widgets\LngMenu.php(15): CWidget->render('lng_menu', Array)
+#8 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(181): LngMenu->run()
+#9 C:\newOpenServer\domains\netscout.local\protected\views\layouts\main-logged.php(16): CBaseController->widget('application.wid...')
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require('C:\\newOpenServe...')
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\newOpenServe...', Array, true)
+#12 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(784): CBaseController->renderFile('C:\\newOpenServe...', Array, true)
+#13 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(133): CController->render('comp_info', Array)
+#14 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionCompInfo()
+#15 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): CController->run('compinfo')
+#19 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController('service/compinf...')
+#20 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\newOpenServer\domains\netscout.local\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/lt/service/compinfo?ip=192.168.1.101&dc=9&ops=Windows%207/Server%202008%20R2
+---
+2015/02/20 16:07:38 [error] [php] Invalid argument supplied for foreach() (C:\newOpenServer\domains\netscout.local\protected\widgets\views\lng_menu.php:3)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\widgets\CWidget.php(244): LngMenu->renderFile()
+#1 C:\newOpenServer\domains\netscout.local\protected\widgets\LngMenu.php(19): LngMenu->render()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(181): LngMenu->run()
+#3 C:\newOpenServer\domains\netscout.local\protected\views\layouts\main-logged.php(16): ServiceController->widget()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): ServiceController->renderInternal()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(784): ServiceController->renderFile()
+#7 C:\newOpenServer\domains\netscout.local\protected\controllers\ServiceController.php(133): ServiceController->render()
+#8 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(49): ServiceController->actionCompInfo()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): ServiceController->runAction()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): ServiceController->runActionWithFilters()
+#12 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): ServiceController->run()
+#13 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/en/service/compinfo?ip=192.168.1.101&dc=9&ops=Windows%207/Server%202008%20R2
+in C:\newOpenServer\domains\netscout.local\protected\widgets\views\lng_menu.php (3)
+in C:\newOpenServer\domains\netscout.local\protected\widgets\LngMenu.php (19)
+in C:\newOpenServer\domains\netscout.local\protected\views\layouts\main-logged.php (16)
+2015/02/20 16:07:46 [error] [php] Invalid argument supplied for foreach() (C:\newOpenServer\domains\netscout.local\protected\widgets\views\lng_menu.php:3)
+Stack trace:
+#0 C:\newOpenServer\domains\netscout.local\framework\web\widgets\CWidget.php(244): LngMenu->renderFile()
+#1 C:\newOpenServer\domains\netscout.local\protected\widgets\LngMenu.php(19): LngMenu->render()
+#2 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(181): LngMenu->run()
+#3 C:\newOpenServer\domains\netscout.local\protected\views\layouts\main.php(18): PageController->widget()
+#4 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(126): require()
+#5 C:\newOpenServer\domains\netscout.local\framework\web\CBaseController.php(95): PageController->renderInternal()
+#6 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(784): PageController->renderFile()
+#7 C:\newOpenServer\domains\netscout.local\protected\controllers\PageController.php(17): PageController->render()
+#8 unknown(0): PageController->actionIndex()
+#9 C:\newOpenServer\domains\netscout.local\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#10 C:\newOpenServer\domains\netscout.local\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(286): PageController->runAction()
+#13 C:\newOpenServer\domains\netscout.local\framework\web\CController.php(265): PageController->runActionWithFilters()
+#14 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(282): PageController->run()
+#15 C:\newOpenServer\domains\netscout.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\newOpenServer\domains\netscout.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\newOpenServer\domains\netscout.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\newOpenServer\domains\netscout.local\protected\widgets\views\lng_menu.php (3)
+in C:\newOpenServer\domains\netscout.local\protected\widgets\LngMenu.php (19)
+in C:\newOpenServer\domains\netscout.local\protected\views\layouts\main.php (18)

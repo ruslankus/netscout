@@ -120,6 +120,7 @@ class ServiceController extends Controller
         $dcId = $request->getParam('dc');
         $ip = $request->getParam('ip');
         $opSys = $request->getParam('ops');
+        $lng = Yii::app()->language;
         
         $objDc = Datacentres::model()->findByPk((int)$dcId);
         if(!empty($objDc)){
@@ -128,7 +129,8 @@ class ServiceController extends Controller
             //$objXml = simplexml_load_string($xmlData);  
         
             
-            $this->render('comp_info', array('objDc' => $objDc, 'opSys' => $opSys, 'ip' => $ip));        
+            $this->render('comp_info', array('objDc' => $objDc,
+             'opSys' => $opSys, 'ip' => $ip, 'lng' => $lng));        
         }else{
             //error
         } 
@@ -262,6 +264,11 @@ class ServiceController extends Controller
     
     
   /*------------------------------- private data -----------------------------------------*/
+  
+  
+    private function _array_average($array) {
+        return array_sum($array) / count($array);
+    }//everage  
     
    
     private $ltGate = 'http://192.168.1.135/?action=last';

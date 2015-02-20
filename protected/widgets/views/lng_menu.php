@@ -6,8 +6,7 @@
       if($current == $lng->lng_prefix){
         $link = "<span>". strtoupper($lng->lng_prefix) ."</span>";   
       }else{
-        $link = '<a href="'.Yii::app()->createUrl('/'.$controller.'/'.$action , $params).'">'.
-         strtoupper($lng->lng_prefix).'</a>';
+        $link = '<a href="/'.$lng->lng_prefix . '/'. $url .'">'. strtoupper($lng->lng_prefix) .'</a>';
       }  
         
      

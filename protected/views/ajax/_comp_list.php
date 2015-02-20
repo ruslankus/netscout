@@ -23,7 +23,7 @@
         </td>
 		<td>
             <?php if($rowXml->netscout == 1): ?>
-            <a href="/service/compinfo?ip=<?php echo $rowXml->ip?>&dc=<?php echo $objDc->id; ?>&ops=<?php echo $rowXml->os; ?>">
+            <a href="/<?php echo $lng ?>/service/compinfo?ip=<?php echo $rowXml->ip?>&dc=<?php echo $objDc->id; ?>&ops=<?php echo $rowXml->os; ?>">
                 <?php echo $rowXml->ip ?>
             </a>
             <?php else:?>

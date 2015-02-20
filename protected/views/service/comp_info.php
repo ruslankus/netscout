@@ -15,7 +15,7 @@
 
 		<h2>Mega server</h2>
 		<div id="links">
-			<a class="button buttons-backgrounds" href="/service/datacentr" >Go Back</a>
+			<a class="button buttons-backgrounds" href="/<?php echo $lng?>/service/complist/<?php echo $objDc->id?>" >Go Back</a>
 			<a id="btn-refresh" class="button buttons-backgrounds" data-ip='<?php echo $ip ?>' data-dc='<?php echo $objDc->id?>' href="#" >Refresh</a>
 		</div>
         
@@ -26,7 +26,15 @@
             <table>
                 <tr>
                     <th>
-                        Address
+                        Dc Name / Ip adress
+                    </th>
+                    <td>
+                        <?php echo $objDc->datacenter_name ?> / <?php echo $objDc->ip_address ?>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Local ip adress
                     </th>
                     <td>
                         <?php echo $ip?>
